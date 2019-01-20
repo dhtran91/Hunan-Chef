@@ -127,14 +127,14 @@ let seafood = [
 ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let Seafood = [
-    new MenuItem("Seafood", "", "", new Price(1, 9.95), ""),
-];
+// let Seafood = [
+//     new MenuItem("Seafood", "", "", new Price(1, 9.95), ""),
+// ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let Seafood = [
-    new MenuItem("Seafood", "", "", new Price(1, 9.95), ""),
-];
+// let Seafood = [
+//     new MenuItem("Seafood", "", "", new Price(1, 9.95), ""),
+// ];
 
 // Seafood
 // Hunan Shrimp $11.95
