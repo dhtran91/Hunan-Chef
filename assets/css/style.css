@@ -1,0 +1,215 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 230, 204) !important;
+}
+
+/* ---------------------------------------------
+Body
+--------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.parallax-container .container{
+    height:100%;
+}
+
+.section-intro {
+    height: 100vh;
+}
+
+.section-menu {
+    height: 50vh;
+}
+
+.text-section {
+    max-width: 35em;
+    line-height: 2;
+}
+
+.parallax {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: black;
+    opacity: .4;
+    top: 0;
+}
+
+.section-intro .parallax {
+    background-image: url('../images/chef-dough.jpg');
+}
+
+.section-menu .parallax {
+    background-image: url('../images/hunan-chef-fortune-cookie.jpg');
+}
+
+/* ---------------------------------------------
+NavBar
+--------------------------------------------- */
+
+header {
+    top: 0;
+    position: absolute;
+}
+
+#navbar {
+    background-color: transparent;
+    box-shadow: none;
+    transition: top 0.8s, background-color 0.5s;
+}
+
+.hunan-logo {
+    height: 100%;
+    padding: .3em 0;
+    margin: 0 .3em 0 1em;
+}
+
+
+/* ---------------------------------------------
+SideNav
+--------------------------------------------- */
+
+.sidenav li>a:hover {
+    background-color: #5F564C;
+}
+
+.sidenav {
+    width: 260px;
+}
+
+.collection.with-header .collection-header, .sidenav {
+    background-color: black;
+}
+
+.flex-container {
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-nav-logo {
+    color: inherit;
+    float: left;
+    height: 45px;
+    position: inherit;
+    text-align: center;
+    margin: auto 15px auto 0;
+    vertical-align: middle;
+}
+
+
+/* ---------------------------------------------
+Links
+--------------------------------------------- */
+
+nav ul li, .menu, .footer-nav li, .sidenav .collection-header a:hover {
+    position: relative;
+}
+
+nav ul li > a::before, .menu::before, .footer-nav li a::before, .sidenav .collection-header a::before  {
+    content: "";
+    background: rgb(255, 230, 204);
+    height:2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+
+nav ul li > a:hover:before, .menu:hover:before, .footer-nav li a:hover::before, .sidenav .collection-header a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* ---------------------------------------------
+Footer
+--------------------------------------------- */
+
+footer {
+    padding: 2em 0 0 0;
+    background-color: black;
+    position: relative
+}
+
+.footer-nav li {
+    display: block;
+}
+
+.footer-nav li a {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+}
+
+#btnTop {
+    border-radius: 3.75em;
+    -moz-border-radius: 3.75em;
+    -webkit-border-radius: 3.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: -1.5em;
+    left: 0;
+    right: 0;
+    width: 3.75em;
+    height: 3.75em;
+    padding-top: .3em;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9em;
+    color: rgb(255, 230, 204);
+    background-color: black;
+    line-height: .4;
+}
+
+.social-btn {
+    margin: 5px 0;
+    border-radius: 50%;
+}
+
+.social-btn:hover {
+    opacity: 0.7;
+}
+
+.fb-btn {
+    background-color: #3B5998 !important;
+}
+
+/* ---------------------------------------------
+Media Queries
+--------------------------------------------- */
+
+@media only screen and (orientation: landscape){
+    .section-intro .parallax {
+        background-image: url('../images/buffet.jpg');
+    }
+}

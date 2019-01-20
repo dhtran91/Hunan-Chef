@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hunan Chef Chinese Resturant</title>
+    <!--Import Google Material Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Raleway Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Animate On Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav id="navbar">
+                <div class="nav-wrapper">
+                    <img alt="Hunan Chef" class="hunan-logo hide-on-med-and-down" src="./assets/images/hunan-chef-logo.png" />
+                    <a href="index.html" class="brand-logo left hide-on-med-and-down">
+                        Hunan Chef
+                    </a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
+                        <li><a href="#location-map">Location/Hours</a></li>
+                        <li><a href="#location-info">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav collection with-header container" id="mobile-nav">
+            <li class="collection-header" style="font-size: 24px;">
+                <div class="flex-container">
+                    <div style="height: 100%;">
+                        <img src="./assets/images/hunan-chef-logo.png" style="height: 100%;" />
+                    </div>
+                    <a href="index.html" style="font-size: 20px;">
+                            Hunan Chef
+                    </a>
+                    <i class="material-icons sidenav-close" style="cursor: pointer;">chevron_right</i>
+                </div>
+            </li>
+            <li><a class="sidenav-close" href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
+            <li><a class="sidenav-close" href="#map">Location/Hours</a></li>
+            <li><a class="sidenav-close" href="#bottom">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="parallax-container section-intro">
+            <div class="container center-align valign-wrapper">
+                <div class="row">
+                    <div class="col" data-aos="zoom-in" data-aos-once="true" id="section-welcome">
+                        <h1 class="">WELCOME TO HUNAN CHEF</h1>
+                        <h6>CHINESE RESTAURANT / BUFFET</h6>
+                    </div>
+                </div>
+            </div>
+            <img class="parallax"/>
+            <div class="overlay"></div>
+        </section>
+        <section class="section container center-align text-section" data-aos="zoom-in-up" data-aos-once="true" id="about-section">
+            <h2 class="underline">ABOUT US</h2>
+            <p>Located along I-10 with close proximity to the Memorial area and Spring Branch area, Hunan Chef features
+                authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve lunch and
+                dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
+                affordable prices to keep your wallet full and your stomach even fuller!</p>
+        </section>
+        <section class="parallax-container section-menu">
+            <div class="container center-align valign-wrapper">
+                <div class="row">
+                    <div class="col" data-aos="flip-up" data-aos-once="true">
+                        <a class="menu" href="./assets/menu/hunan-chef-menu.pdf" target="_blank">
+                            <h1>VIEW OUR MENU</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img class="parallax"/>
+            <div class="overlay"></div>
+        </section>
+        <section class="section" id="location-section">
+            <div class="container center-align">
+                <div class="row">
+                    <div class="col s12 m9 l9 xl9">
+                        <iframe id="location-map" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
+                &q=Hunan+Chef,Houston+TX&zoom=12"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div id="location-info" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
+                        <section class="section">
+                            <h6>LOCATION</h6>
+                            8404 Katy Fwy
+                            <br>Houston, TX 77024
+                        </section>
+
+                        <section class="section">
+                            <h6>HOURS</h6>
+                            Monday-Sunday
+                            <br>11AM-9:30PM
+                        </section>
+                        <section class="section">
+                            <h6>CONTACT</h6>
+                            (713) 984-8488
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="bottom">
+        <a id="btnTop" href="#top" class="tooltipped" data-position="right" data-tooltip="Back to top"><i class="material-icons">expand_less</i>
+            <p style="margin: 0">Top</p>
+        </a>
+        <div class="container center-align" style="position: relative">
+            <div class="row">
+                <div class="col s8 offset-s2 offset-m2 m8 offset-l2 l8 offset-xl2 xl8">
+                    <ul class="footer-nav">
+                        <li><a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
+                        <li><a href="#location-map">Location/Hour</a></li>
+                        <li><a href="#location-info">Contact</a></li>
+                    </ul>
+                    <small>&copy; Hunan Chef. All rights reserved.</small>
+                </div>
+                <div class="col s2 m2 l2 xl2">
+                    <h6 class="hide-on-small-only">Connect with us:</h6>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/Hunan-Chef-at-Katy-Freeway-175964079099975/" class="btn-floating social-btn fb-btn tooltipped waves-circle waves-effect"
+                                target="_blank" data-position="right" data-tooltip="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animate On Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+</body>
+
+</html>
