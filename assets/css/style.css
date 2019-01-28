@@ -1,6 +1,15 @@
+/* *, a, .nav-wrapper a, .sidenav li>a {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 230, 204);
+} */
+
+a, .nav-wrapper a, .sidenav li>a, h1, h2, h3, h4, h5, h6 {
+    color: rgb(255, 230, 204);
+}
+
 * {
     font-family: 'Raleway', sans-serif;
-    color: rgb(255, 230, 204) !important;
+    color: #BFAC99;
 }
 
 /* ---------------------------------------------
@@ -21,30 +30,31 @@ main {
     flex: 1 0 auto;
 }
 
-.parallax-container .container{
-    height:100%;
+header {
+    top: 0;
+    position: absolute;
 }
+
+nav {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* ---------------------------------------------
+Section
+--------------------------------------------- */
 
 .section-intro {
     height: 100vh;
 }
 
 .section-menu {
-    height: 50vh;
+    height: 60vh;
 }
 
 .text-section {
-    max-width: 35em;
+    max-width: 45em;
     line-height: 2;
-}
-
-.parallax {
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .overlay {
@@ -55,6 +65,23 @@ main {
     background-color: black;
     opacity: .4;
     top: 0;
+}
+
+/* ---------------------------------------------
+Parallax
+--------------------------------------------- */
+
+.parallax-container .container{
+    height:100%;
+}
+
+.parallax {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section-intro .parallax {
@@ -69,14 +96,7 @@ main {
 NavBar
 --------------------------------------------- */
 
-header {
-    top: 0;
-    position: absolute;
-}
-
 #navbar {
-    background-color: transparent;
-    box-shadow: none;
     transition: top 0.8s, background-color 0.5s;
 }
 
@@ -84,6 +104,46 @@ header {
     height: 100%;
     padding: .3em 0;
     margin: 0 .3em 0 1em;
+}
+
+
+/* ---------------------------------------------
+Menu
+--------------------------------------------- */
+
+#menuSectionNav button {
+    font-size: .75rem;
+    font-weight: 400;
+    padding: 0 .2rem;
+    letter-spacing: .05rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid transparent;
+    height: 2rem;
+    margin: .5rem;
+}
+
+.active {
+    color: rgb(255, 230, 204);
+    border-bottom-color: rgb(255, 230, 204);
+}
+
+.menu-item {
+    border-bottom: 1px solid #BFAC99;
+}
+
+.menu-item h6, .menu-item p {
+    margin-bottom: 0;
+}
+
+#menuSectionNav button:hover {
+    color: rgb(255, 230, 204);
+    border-bottom-color: rgb(255, 230, 204);
+    background-color: rgba(0,0,0,0.2);
+}
+
+#menuSectionNav li {
+    display: inline-block;
 }
 
 
@@ -125,16 +185,21 @@ SideNav
 Links
 --------------------------------------------- */
 
-nav ul li, .menu, .footer-nav li, .sidenav .collection-header a:hover {
-    position: relative;
+.material-icons.sidenav-close {
+    cursor: pointer;
 }
 
-nav ul li > a::before, .menu::before, .footer-nav li a::before, .sidenav .collection-header a::before  {
+
+nav ul a, .footer-nav a, .sidenav .collection-header a {
+    position: relative;    
+}
+
+nav ul a::before, .footer-nav a::before, .sidenav .collection-header a::before {
     content: "";
     background: rgb(255, 230, 204);
-    height:2px;
+    height: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: .1em;
     left: 0;
     width: 100%;
     visibility: hidden;
@@ -142,10 +207,11 @@ nav ul li > a::before, .menu::before, .footer-nav li a::before, .sidenav .collec
     transition: .25s linear;
 }
 
-nav ul li > a:hover:before, .menu:hover:before, .footer-nav li a:hover::before, .sidenav .collection-header a:hover::before{
+nav ul a:hover::before, .footer-nav a:hover::before, .sidenav .collection-header a:hover::before{
     visibility: visible;
     transform: scaleX(1);
 }
+
 
 /* ---------------------------------------------
 Footer
@@ -154,17 +220,11 @@ Footer
 footer {
     padding: 2em 0 0 0;
     background-color: black;
-    position: relative
-}
-
-.footer-nav li {
-    display: block;
+    position: relative;
 }
 
 .footer-nav li a {
-    display: inline-block;
-    padding: 0 15px;
-    position: relative;
+    padding: 0 .2rem;
 }
 
 #btnTop {
