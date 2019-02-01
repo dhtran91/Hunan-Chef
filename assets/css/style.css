@@ -49,7 +49,7 @@ Section
 }
 
 .section-menu {
-    height: 60vh;
+    height: 50vh;
 }
 
 .text-section {
@@ -111,7 +111,7 @@ NavBar
 Menu
 --------------------------------------------- */
 
-#menuSectionNav button {
+#menuSectionFilter button {
     font-size: .75rem;
     font-weight: 400;
     padding: 0 .2rem;
@@ -123,12 +123,20 @@ Menu
     margin: .5rem;
 }
 
-.active {
+#menuSectionFilter .activeFilter {
     color: rgb(255, 230, 204);
     border-bottom-color: rgb(255, 230, 204);
 }
 
 .menu-item {
+    display: none;
+}
+
+.activeItem {
+    display: block !important;
+}
+
+.menu-item .container-fluid {
     border-bottom: 1px solid #BFAC99;
 }
 
@@ -136,13 +144,13 @@ Menu
     margin-bottom: 0;
 }
 
-#menuSectionNav button:hover {
+#menuSectionFilter button:hover {
     color: rgb(255, 230, 204);
     border-bottom-color: rgb(255, 230, 204);
     background-color: rgba(0,0,0,0.2);
 }
 
-#menuSectionNav li {
+#menuSectionFilter li {
     display: inline-block;
 }
 

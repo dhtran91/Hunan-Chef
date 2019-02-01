@@ -10,7 +10,7 @@ function Price(priceType, priceAmount) {
     this.priceAmount = priceAmount;
 }
 
-let appetizers = [
+const appetizers = [
     new MenuItem("Appetizers", "Steamed Spring Roll", "", new Price(3, 3.75)),
     new MenuItem("Appetizers", "Egg Roll", "", new Price(2, 2.75)),
     new MenuItem("Appetizers", "Vegetable Egg Roll", "", new Price(3, 6.95)),
@@ -24,7 +24,7 @@ let appetizers = [
     new MenuItem("Appetizers", "French Fries", "", new Price(1, 3.95))
 ];
 
-let soups = [
+const soups = [
     new MenuItem("Soup", "Wonton Soup", "", [new Price("S", 2.25), new Price("L", 3.95)]),
     new MenuItem("Soup", "Hot & Sour Soup", "", [new Price("S", 2.25), new Price("L", 3.95)]),
     new MenuItem("Soup", "Egg Drop Soup", "", [new Price("S", 2.25), new Price("L", 3.95)]),
@@ -35,21 +35,21 @@ let soups = [
 ]
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let chefsSpecialities = [
-    new MenuItem("Chef’s Specialties", "General Tso’s Chicken", "Chucks of crispy boneless chicken, blended in a tasty sweet & sour and spicy brown sauce.", new Price(1, 10.50)),
-    new MenuItem("Chef’s Specialties", "Orange Flavored Chicken", "Chunks of chicken lightly breaded and glazed with a spicy orange peel sauce.", new Price(1, 10.50)),
-    new MenuItem("Chef’s Specialties", "Sesame Chicken", "Marinated slices of chicken breast glazed with delightfully flavored sesame sauce.", new Price(1, 10.50)),
-    new MenuItem("Chef’s Specialties", "Orange Flavored Beef", "Tender chunks of beef lightly breaded and glazed with chef’s spicy orange sauce.", new Price(1, 11.95)),
-    new MenuItem("Chef’s Specialties", "Sesame Beef", "Marinated slices of beef glazed with delightfully flavored sesame sauce.", new Price(1, 11.95)),
-    new MenuItem("Chef’s Specialties", "Orange Flavored Shrimp", "Jumbo shrimp lightly breaded and glazed with chef’s spicy orange sauce.", new Price(1, 12.95)),
-    new MenuItem("Chef’s Specialties", "Sesame Shrimp", "Jumbo shrimp marinated and glazed with delightfully flavored sesame sauce.", new Price(1, 12.95)),
-    new MenuItem("Chef’s Specialties", "Kung Pao Delight", "Chicken, beef, shrimp and scallop stir fried in hot & spicy sauce with crunchy peanuts.", new Price(1, 12.95)),
-    new MenuItem("Chef’s Specialties", "Happy Family", "Chicken, beef, shrimp and scallop sautéed with water chestnut, mushroom, snow peas and broccoli in a flavored brown sauce.", new Price(1, 12.95)),
-    new MenuItem("Chef’s Specialties", "Sizzling Scallop & Beef", "Sliced tenderloin of beef & fresh scallop sautéed with vegetable in a rich brown sauce, served on a sizzling plate.", new Price(1, 12.95))
+const chefsSpecialties = [
+    new MenuItem("Chef's Specialties", "General Tso's Chicken", "Chucks of crispy boneless chicken, blended in a tasty sweet & sour and spicy brown sauce.", new Price(1, 10.50)),
+    new MenuItem("Chef's Specialties", "Orange Flavored Chicken", "Chunks of chicken lightly breaded and glazed with a spicy orange peel sauce.", new Price(1, 10.50)),
+    new MenuItem("Chef's Specialties", "Sesame Chicken", "Marinated slices of chicken breast glazed with delightfully flavored sesame sauce.", new Price(1, 10.50)),
+    new MenuItem("Chef's Specialties", "Orange Flavored Beef", "Tender chunks of beef lightly breaded and glazed with chef's spicy orange sauce.", new Price(1, 11.95)),
+    new MenuItem("Chef's Specialties", "Sesame Beef", "Marinated slices of beef glazed with delightfully flavored sesame sauce.", new Price(1, 11.95)),
+    new MenuItem("Chef's Specialties", "Orange Flavored Shrimp", "Jumbo shrimp lightly breaded and glazed with chef's spicy orange sauce.", new Price(1, 12.95)),
+    new MenuItem("Chef's Specialties", "Sesame Shrimp", "Jumbo shrimp marinated and glazed with delightfully flavored sesame sauce.", new Price(1, 12.95)),
+    new MenuItem("Chef's Specialties", "Kung Pao Delight", "Chicken, beef, shrimp and scallop stir fried in hot & spicy sauce with crunchy peanuts.", new Price(1, 12.95)),
+    new MenuItem("Chef's Specialties", "Happy Family", "Chicken, beef, shrimp and scallop sautéed with water chestnut, mushroom, snow peas and broccoli in a flavored brown sauce.", new Price(1, 12.95)),
+    new MenuItem("Chef's Specialties", "Sizzling Scallop & Beef", "Sliced tenderloin of beef & fresh scallop sautéed with vegetable in a rich brown sauce, served on a sizzling plate.", new Price(1, 12.95))
 ]
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let healthFoodSelection = [
+const healthFoodSelection = [
     new MenuItem("Health Food Selection", "Steamed Mixed Vegetables", "", new Price(1, 7.50)),
     new MenuItem("Health Food Selection", "Steamed Chicken with Vegetables", "", new Price(1, 8.50)),
     new MenuItem("Health Food Selection", "Steamed Chicken with Broccoli", "", new Price(1, 8.50)),
@@ -60,7 +60,7 @@ let healthFoodSelection = [
 ]
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let vegetables = [
+const vegetables = [
     new MenuItem("Vegetables", "Mixed Vegetables", "Chinese cabbage, mushroom, water chestnut, broccoli & snow peas in white sauce.", new Price(1, 7.50)),
     new MenuItem("Vegetables", "Broccoli with Garlic Sauce", "Broccoli and water chestnuts sautéed in spicy garlic sauce.", new Price(1, 7.50)),
     new MenuItem("Vegetables", "Mixed Vegetables with Garlic Sauce", "Sauteed mixed vegetables with garlic sauce.", new Price(1, 7.50)),
@@ -71,7 +71,7 @@ let vegetables = [
 ]
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let poultry = [
+const poultry = [
     new MenuItem("Poultry", "Sweet & Sour Chicken", "Batter deep fried chicken with sweet & sour sauce.", new Price(1, 7.95)),
     new MenuItem("Poultry", "Moo Goo Gai Pan", "Sliced chicken with vegetables in white sauce.", new Price(1, 7.95)),
     new MenuItem("Poultry", "Cashew Chicken", "Sliced chicken with vegetables and roasted cashew nut in brown sauce.", new Price(1, 8.50)),
@@ -82,12 +82,12 @@ let poultry = [
     new MenuItem("Poultry", "Chicken Egg Foo Young", "Chinese style egg omelette with chicken & vegetable in oyster flavored gravy.", new Price(1, 8.50)),
     new MenuItem("Poultry", "Chicken w/ Snow Peas & water Chestnut", "Sliced chicken stir fried with snow peas in white sauce.", new Price(1, 9.50)),
     new MenuItem("Poultry", "Kung Pao Chicken", "Dried chicken with roasted peanut in spicy brown sauce.", new Price(1, 9.50)),
-    new MenuItem("Poultry", "Hunan Chicken", "Sliced chicken breast w/ carrot, snow peas, straw mushroom, and broccoli in chef’s spicy sauce.", new Price(1, 9.50)),
+    new MenuItem("Poultry", "Hunan Chicken", "Sliced chicken breast w/ carrot, snow peas, straw mushroom, and broccoli in chef's spicy sauce.", new Price(1, 9.50)),
     new MenuItem("Poultry", "Moo Shu Chicken", "Shredded chicken & vegetables with plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 9.50))
 ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let beef = [
+const beef = [
     new MenuItem("Beef", "Pepper Steak", "Tender beef sautéed with green pepper and onion in brown sauce.", new Price(1, 9.95)),
     new MenuItem("Beef", "Beef with Broccoli", "Sliced tender beef with broccoli in brown sauce.", new Price(1, 9.95)),
     new MenuItem("Beef", "Beef with Garlic Sauce", "Sliced tender beef with spicy garlic sauce.", new Price(1, 9.95)),
@@ -96,12 +96,12 @@ let beef = [
     new MenuItem("Beef", "Kung Pao Beef", "Sliced tender beef sautéed with peanuts in spicy sauce.", new Price(1, 9.95)),
     new MenuItem("Beef", "Beef Egg Foo Young", "Chinese style egg omelette with beef & vegetables in oyster flavored gravy.", new Price(1, 9.95)),
     new MenuItem("Beef", "Beef with Snow Peas & Water Chestnut", "Sliced tender beef sautéed with snow peas & water chestnuts in brown sauce.", new Price(1, 10.95)),
-    new MenuItem("Beef", "Hunan Beef", "Sliced beef with carrot, snow peas, straw mushrooms, broccoli in chef’s spicy sauce.", new Price(1, 10.95)),
+    new MenuItem("Beef", "Hunan Beef", "Sliced beef with carrot, snow peas, straw mushrooms, broccoli in chef's spicy sauce.", new Price(1, 10.95)),
     new MenuItem("Beef", "Moo Shu Beef", "Beef & vegetables plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 10.95))
 ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let seafood = [
+const seafood = [
     new MenuItem("Seafood", "Sweet & Sour Shrimp", "Battered fried shrimp with sweet and sour sauce.", new Price(1, 10.50)),
     new MenuItem("Seafood", "Kung Pao Shrimp", "Shrimp with diced vegetable and peanuts in spicy sauce.", new Price(1, 10.95)),
     new MenuItem("Seafood", "Shrimp with Cashew Nuts", "Fried jumbo shrimp with bamboo shoot, celery, water chestnut and roasted cashew nut.", new Price(1, 10.95)),
@@ -113,13 +113,13 @@ let seafood = [
     new MenuItem("Seafood", "Curry Shrimp", "Fresh jumbo shrimp and onions sautéed with curry sauce.", new Price(1, 10.95)),
     new MenuItem("Seafood", "Shrimp with Snow Peas & Water Chestnut", "Fresh jumbo shrimp with snow peas & water chestnut in white sauce.", new Price(1, 10.95)),
     new MenuItem("Seafood", "Moo Shu Shrimp", "Fresh shrimp and vegetables with plum sauce. Served with 4 Pancakes.", new Price(1, 10.95)),
-    new MenuItem("Seafood", "Hunan Shrimp", "Fresh jumbo shrimp with snow peas, straw mushroom & broccoli in chef’s spicy sauce.", new Price(1, 11.95)),
+    new MenuItem("Seafood", "Hunan Shrimp", "Fresh jumbo shrimp with snow peas, straw mushroom & broccoli in chef's spicy sauce.", new Price(1, 11.95)),
     new MenuItem("Seafood", "Scallops with Garlic Sauce", "Scallops sautéed with spicy garlic sauce.", new Price(1, 12.95)),
     new MenuItem("Seafood", "Scallops with Vegetables", "Scallops sautéed with mix vegetables.", new Price(1, 12.95))
 ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let pork = [
+const pork = [
     new MenuItem("Pork", "Sweet & Sour Pork", "Batter deep fried pork with sweet & sour sauce.", new Price(1, 7.95)),
     new MenuItem("Pork", "Pork with Garlic Sauce", "Shredded pork with shredded vegetables in spicy garlic sauce.", new Price(1, 8.50)),
     new MenuItem("Pork", "Twice cooked Pork", "Twice cooked sliced pork with vegetables in spicy brown sauce.", new Price(1, 8.50)),
@@ -128,27 +128,27 @@ let pork = [
     new MenuItem("Pork", "Roasted Pork with Broccoli", "Roasted BBQ pork with broccoli.", new Price(1, 8.50)),
     new MenuItem("Pork", "Roasted Pork Egg Foo Young", "Chinese style egg omelet with roasted pork and vegetables with oyster flavored gravy.", new Price(1, 8.50)),
     new MenuItem("Pork", "Roasted Pork with Snow Peas & Water Chestnut", "Sliced BBQ pork with snow peas and water chestnuts in brown sauce.", new Price(1, 9.50)),
-    new MenuItem("Pork", "Hunan Pork", "Sliced pork with carrot, snow peas, baby corn, straw mushroom and broccoli in chef’s spicy sauce.", new Price(1, 9.50)),
+    new MenuItem("Pork", "Hunan Pork", "Sliced pork with carrot, snow peas, baby corn, straw mushroom and broccoli in chef's spicy sauce.", new Price(1, 9.50)),
     new MenuItem("Pork", "Moo Shu Pork", "Shredded pork with vegetables served with plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 9.50))
 ];
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
-let friedRiceAndNoodles = [
-    new MenuItem("Fried Rice & Noodles", "Vegetables Fried Rice", "", new Price(1, 6.50)),
-    new MenuItem("Fried Rice & Noodles", "Chicken & Pork Fried Rice", "", new Price(1, 6.50)),
-    new MenuItem("Fried Rice & Noodles", "Beef or Shrimp Fried Rice", "", new Price(1, 7.50)),
-    new MenuItem("Fried Rice & Noodles", "House Special Fried Rice", "", new Price(1, 8.50)),
-    new MenuItem("Fried Rice & Noodles", "Vegetables Lo Mein", "Soft Noodles.", new Price(1, 6.95)),
-    new MenuItem("Fried Rice & Noodles", "Chicken or Pork Lo Mein", "Soft Noodles.", new Price(1, 6.95)),
-    new MenuItem("Fried Rice & Noodles", "Beef or Shrimp Lo Mein", "Soft Noodles.", new Price(1, 7.95)),
-    new MenuItem("Fried Rice & Noodles", "House Special Lo Mein", "Soft Noodles.", new Price(1, 8.50)),
-    new MenuItem("Fried Rice & Noodles", "House Special Pan Fried Noodles", "Soft Noodles.", new Price(1, 8.50)),
+const friedRiceAndNoodles = [
+    new MenuItem("Fried Rice & Noodle", "Vegetables Fried Rice", "", new Price(1, 6.50)),
+    new MenuItem("Fried Rice & Noodle", "Chicken & Pork Fried Rice", "", new Price(1, 6.50)),
+    new MenuItem("Fried Rice & Noodle", "Beef or Shrimp Fried Rice", "", new Price(1, 7.50)),
+    new MenuItem("Fried Rice & Noodle", "House Special Fried Rice", "", new Price(1, 8.50)),
+    new MenuItem("Fried Rice & Noodle", "Vegetables Lo Mein", "Soft Noodles.", new Price(1, 6.95)),
+    new MenuItem("Fried Rice & Noodle", "Chicken or Pork Lo Mein", "Soft Noodles.", new Price(1, 6.95)),
+    new MenuItem("Fried Rice & Noodle", "Beef or Shrimp Lo Mein", "Soft Noodles.", new Price(1, 7.95)),
+    new MenuItem("Fried Rice & Noodle", "House Special Lo Mein", "Soft Noodles.", new Price(1, 8.50)),
+    new MenuItem("Fried Rice & Noodle", "House Special Pan Fried Noodles", "Soft Noodles.", new Price(1, 8.50)),
 ];
 
-let Menu = [
+const Menu = [
     appetizers,
     soups,
-    chefsSpecialities,
+    chefsSpecialties,
     healthFoodSelection,
     vegetables,
     poultry,
@@ -158,83 +158,112 @@ let Menu = [
     friedRiceAndNoodles
 ];
 
-function menuNav() {
-    let menuNav = `
-    <div class="col s12 m12 l12 xl12 center-align">
-    <ul class="menu-section-nav">`;
+function createMenuFilterDiv(menu) {
+    let menuFilterDiv = document.createElement('div');
+    menuFilterDiv.classList.add('col', 's12', 'm12', 'l12', 'xl12', 'center-align');
 
-    Menu.forEach(x => menuNav += `<li><button class="hello" data-menu-filter="${x[0].foodCourse}" type="button">${x[0].foodCourse.toUpperCase()}</button></li>`);
+    let ul = document.createElement('ul');
 
-    menuNav += `</ul></div>`
+    menu.forEach((foodCategory, i) => {
+        let li = document.createElement('li');
+        let course = foodCategory[0].foodCourse;
+        let button = document.createElement('button');
 
-    return menuNav;
+        button.classList.add('menu-filter-btn');
+        button.type = "button";
+        button.textContent = course.toUpperCase();
+        button.dataset.menuFoodCourse = course;
+        button.addEventListener('click', () => {
+            handleMenuFilter(course);
+        })
+
+        li.appendChild(button)
+        ul.appendChild(li);
+    });
+
+    menuFilterDiv.appendChild(ul);
+    return menuFilterDiv;
 }
 
-// compare data with the database
-function handleMenuFilter(course) {
-
-    // let course = event.dataset.menuFilter;
-    const menuSectionItems = document.getElementById("menuSectionItems");
-    let menuItems = ``;
-
-    Menu.filter(x => x[0].foodCourse === course)[0]
-        .forEach(x => menuItems += createMenuItemDiv(x));
-
-    menuSectionItems.innerHTML = menuItems;
-}
-
-function createMenuItemDiv(menuItem) {
-
-    let menuItemDiv = `
-    <div class="col s6 m6 l4 xl4">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col s10 m10 l10 xl10">
-            `
-
-    // for(let )
-    
-    return `
-    <div class="col s6 m6 l4 xl4">
-        <div class="container-fluid menu-item">
+function createMenuItemDiv(foodCategory) {
+    let menuItemArea = "";
+    foodCategory.forEach((menuItem) => {
+        menuItemArea += `
+    <div class="col s6 m6 l4 xl4 menu-item" data-menu-item="${menuItem.foodCourse}">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col s10 m10 l10 xl10">
-                    <h6>${menuItem.itemName}</h6>
-                    
-                    <p>${menuItem.itemDescription}</p>
-                </div>
-                <div class="col s2 m2 l2 xl2">
-                    <div class="row">
-                        $${menuItem.price.priceAmount}
-                    </div>
-                </div>
-            </div>
-        </div>
+                <div class="col s9 m9 l9 xl9">
+                    <h6>${menuItem.itemName}</h6>`
+
+        if (menuItem.itemDescription) {
+            menuItemArea += `<p>${menuItem.itemDescription}</p>`
+        }
+
+        menuItemArea += `
     </div>
-    `
+    <div class="col s3 m3 l3 xl3">`
+
+        if (menuItem.price.length > 1) {
+            menuItem.price.forEach((e) => {
+                menuItemArea += `<div class="row center-align">
+                (${e.priceType}) ${e.priceAmount.toFixed(2)}
+            </div>`
+            })
+        }
+        else {
+            menuItemArea += `
+        <div class="row">
+        $${menuItem.price.priceAmount.toFixed(2)}
+        </div>
+        `
+        }
+
+        menuItemArea += `</div></div></div></div>`
+    })
+
+    return menuItemArea;
+}
+
+function handleMenuFilter(menuCourse) {
+    let activeFilter = document.querySelector(`.activeFilter`);
+    activeFilter.classList.remove('activeFilter');
+
+    let selectedBtn = document.querySelector(`.menu-filter-btn[data-menu-food-course="${menuCourse}"]`);
+    selectedBtn.classList.add('activeFilter');
+
+    let currentActive = document.querySelectorAll(`.activeItem`);
+    currentActive.forEach(e => e.classList.remove('activeItem'));
+
+    let selectedFilter = document.querySelectorAll(`[data-menu-item="${menuCourse}"]`);
+    selectedFilter.forEach(e => e.classList.add('activeItem'))
+}
+
+function showMenu() {
+    let activeFilter = document.querySelector(`activeFilter`);
+    if(activeFilter === null ) {
+        let activeBtn = document.querySelector('.menu-filter-btn')
+        activeBtn.classList.add('activeFilter');
+        let items = document.querySelectorAll(`[data-menu-item="${activeBtn.dataset.menuFoodCourse}"]`);
+        items.forEach(i => i.classList.add('activeItem'))
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init();
 
-    const menuSectionNav = document.getElementById('menuSectionNav');
-
-    menuSectionNav.innerHTML = menuNav();
+    const menuSectionFilter = document.getElementById('menuSectionFilter');
+    menuSectionFilter.appendChild(createMenuFilterDiv(Menu));
 
     const menuSectionItems = document.getElementById("menuSectionItems");
-    let menuButtons = document.getElementsByClassName("hello");
 
-    // default
-    handleMenuFilter(Menu[0][0].foodCourse);
+    let menuItems = "";
+    Menu.forEach((foodCategory) => {
+        menuItems += createMenuItemDiv(foodCategory);
+    })
+    
+    menuSectionItems.innerHTML = menuItems;
 
-    Object.keys(menuButtons).forEach((key) => {
-        // console.log(menuButtons[key].className)
-        // console.log(menuButtons[key].dataset.menuFilter)
-        menuButtons[key].addEventListener('click', () => {
-            handleMenuFilter(menuButtons[key].dataset.menuFilter);
-        });
-    }
-    )
+    showMenu();
 
 
     const vp = window.matchMedia("(min-width: 992px)");
@@ -249,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let prevScrollPos = window.pageYOffset;
 
     window.addEventListener('scroll', function () {
-        const navBar = document.getElementById('navbar')
+        const navBar = document.getElementById('navbar');
         const intro = document.getElementById("section-welcome");
         let currScrollPos = this.window.scrollY;
 
@@ -263,42 +292,23 @@ document.addEventListener('DOMContentLoaded', function () {
             navBar.style.backgroundColor = "black";
         }
         prevScrollPos = currScrollPos;
-
-        // const aboutSection = document.getElementById('about-section')
-        // const locationDetailsSection = document.getElementById('location-section')
-
-        // if (currScrollPos > intro.offsetTop) {
-        // // if(currScrollPos >= (aboutSection.offsetTop-navBar.offsetHeight) && currScrollPos < (aboutSection.offsetHeight + aboutSection.offsetTop) || currScrollPos >= (locationDetailsSection.offsetTop-navBar.offsetHeight) && currScrollPos < (locationDetailsSection.offsetHeight + locationDetailsSection.offsetTop))
-        //     navBar.style.backgroundColor = "black";
-        // } else {
-        //     navBar.style.backgroundColor = "transparent";
-        // }
     })
-
 });
 
 function handleMediaQuery(e) {
     //If vp width > 992
     if (e.matches) {
         //Close side nav 
-        let sideNav = document.querySelectorAll('.sidenav');
-        var sideNavInstances = M.Sidenav.getInstance(sideNav[0]);
+        const sideNav = document.querySelectorAll('.sidenav');
+        const sideNavInstances = M.Sidenav.getInstance(sideNav[0]);
         sideNavInstances.close();
 
         //Move position of tooltip to right side
-        let toolTipped = document.querySelectorAll('.tooltipped');
+        const toolTipped = document.querySelectorAll('.tooltipped');
         toolTipped.forEach(x => x.dataset.position = "right");
-        // for (let i = 0; i < toolTipped.length; i++) {
-        //     toolTipped[i].dataset.position = "right";
-        // }
     } else {
         //On vp with width < 992px, move position of tooltip to left side
-        let toolTipped = document.querySelectorAll('.tooltipped');
+        const toolTipped = document.querySelectorAll('.tooltipped');
         toolTipped.forEach(x => x.dataset.position = "left");
-        // for (let i = 0; i < toolTipped.length; i++) {
-        //     toolTipped[i].dataset.position = "left";
-        // }
     }
 }
-
-
