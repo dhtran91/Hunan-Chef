@@ -6,112 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hunan Chef Chinese Resturant</title>
-    <!--Import Google Material Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Raleway Google Font -->
+    <!-- Google Raleway Font -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <!-- Animate On Scroll CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome Library -->
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Library for Social Media Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Animate On Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Application CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="navbar-fixed">
-            <nav id="navbar">
-                <div class="nav-wrapper">
-                    <img alt="Hunan Chef" class="hunan-logo hide-on-med-and-down" src="./assets/images/hunan-chef-logo.png" />
-                    <a href="index.html" class="brand-logo left hide-on-med-and-down">
-                        Hunan Chef
-                    </a>
-                    <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
-                        <li><a href="#location-map">Location/Hours</a></li>
-                        <li><a href="#location-info">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <nav id="navbar">
+            <div class="nav-wrapper">
+                <img alt="Hunan Chef" class="hunan-logo hide-on-med-and-down" src="./assets/images/hunan-chef-logo.png" />
+                <a href="index.html" class="brand-logo left hide-on-med-and-down">
+                    Hunan Chef
+                </a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#locationMap">Location/Hours</a></li>
+                    <li><a href="#locationInfo">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <ul class="sidenav collection with-header container" id="slide-out">
-            <li class="collection-header" style="font-size: 24px;">
+            <li class="collection-header">
                 <div class="flex-container">
-                    <div style="height: 100%;">
-                        <img src="./assets/images/hunan-chef-logo.png" style="height: 100%;" />
-                    </div>
-                    <a href="index.html" style="font-size: 20px;">
-                        Hunan Chef
-                    </a>
+                    <img src="./assets/images/hunan-chef-logo.png" class="hunan-logo" />
+                    <h5>
+                        <a href="index.html">
+                            Hunan Chef
+                        </a>
+                    </h5>
                     <i class="material-icons sidenav-close">chevron_right</i>
                 </div>
             </li>
-            <li><a class="sidenav-close" href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
-            <li><a class="sidenav-close" href="#location-map">Location/Hours</a></li>
-            <li><a class="sidenav-close" href="#location-info">Contact</a></li>
+            <li><a class="sidenav-close" href="#menu">Menu</a></li>
+            <li><a class="sidenav-close" href="#locationMap">Location/Hours</a></li>
+            <li><a class="sidenav-close" href="#locationInfo">Contact</a></li>
         </ul>
     </header>
     <main>
-        <section class="parallax-container section-intro">
-            <div class="container center-align valign-wrapper">
-                <div class="row">
-                    <div class="col" data-aos="zoom-in" data-aos-once="true" id="section-welcome">
-                        <h1>WELCOME TO HUNAN CHEF</h1>
-                        <h6>CHINESE RESTAURANT / BUFFET</h6>
-                    </div>
+        <section class="parallax-container section-intro valign-wrapper center-align container-fluid">
+            <div class="row" data-aos="zoom-in" data-aos-once="true" id="sectionWelcome">
+                <div class="col">
+                    <h1>WELCOME TO HUNAN CHEF</h1>
+                    <h6>CHINESE RESTAURANT / BUFFET</h6>
                 </div>
             </div>
             <img class="parallax" />
             <div class="overlay"></div>
         </section>
-        <section class="section container center-align text-section" data-aos="zoom-in-up" data-aos-once="true" id="about-section">
-            <h2>About Us</h2>
-            <p>Located along I-10 with close proximity to the Memorial area and Spring Branch area, Hunan Chef features
+        <section class="section container center-align text-section">
+            <h2 data-aos="zoom-in-up" data-aos-once="true">About Us</h2>
+            <p data-aos="zoom-in-up" data-aos-once="true">Located along I-10 with close proximity to the Memorial area and Spring Branch area, Hunan Chef features
                 authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve lunch
                 and
                 dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
                 affordable prices to keep your wallet full and your stomach even fuller!</p>
         </section>
-        <section class="parallax-container section-menu">
+        <section class="parallax-container section-menu valign-wrapper center-align container-fluid">
             <noscript>
-                <div class="container center-align valign-wrapper">
-                    <div class="row">
-                        <div class="col">
-                            <a class="menu" href="./assets/menu/hunan-chef-menu.pdf" target="_blank">
-                                <h1>VIEW OUR MENU</h1>
-                            </a>
-                        </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">
+                            <h2>VIEW OUR MENU</h2>
+                        </a>
                     </div>
                 </div>
             </noscript>
             <img class="parallax" />
             <div class="overlay"></div>
         </section>
-        <section class="section" data-aos="zoom-in-up" data-aos-once="true" id="menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m12 l12 xl12 center-align">
-                        <h2>Menu</h2>
-                    </div>
-                </div>
-                <div class="row" id="menuSectionFilter"></div>
+        <section class="section container" id="menu">
+                <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
+                <div class="row center-align menu-section-filters" id="menuSectionFilters" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-once="true"></div>
+                <div id="menuSectionNotes"></div>
                 <div class="row" id="menuSectionItems"></div>
-            </div>
         </section>
-        <section class="section" id="location-section">
+        <section class="section">
             <div class="container center-align">
                 <div class="row">
                     <div class="col s12 m9 l9 xl9">
-                        <iframe id="location-map" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
+                        <iframe id="locationMap" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
                 &q=Hunan+Chef,Houston+TX&zoom=12"
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <div id="location-info" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
+                    <div id="locationInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
                         <section class="section">
                             <h6>LOCATION</h6>
                             <p>
@@ -119,7 +109,6 @@
                                 <br>Houston, TX 77024
                             </p>
                         </section>
-
                         <section class="section">
                             <h6>HOURS</h6>
                             <p>
@@ -140,15 +129,15 @@
     </main>
     <footer>
         <a id="btnTop" href="#" class="tooltipped" data-position="right" data-tooltip="Back to top"><i class="material-icons">expand_less</i>
-            <p style="margin: 0">Top</p>
+            <p>Top</p>
         </a>
-        <div class="container center-align" style="position: relative">
+        <div class="container center-align">
             <div class="row">
                 <div class="col s8 offset-s2 offset-m2 m8 offset-l2 l8 offset-xl2 xl8">
                     <ul class="footer-nav">
-                        <li><a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">Menu</a></li>
-                        <li><a href="#location-map">Location/Hour</a></li>
-                        <li><a href="#location-info">Contact</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locationMap">Location/Hour</a></li>
+                        <li><a href="#locationInfo">Contact</a></li>
                     </ul>
                     <small>&copy; Hunan Chef. All rights reserved.</small>
                 </div>
@@ -166,7 +155,6 @@
             </div>
         </div>
     </footer>
-    
 
     <!-- Animate On Scroll JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

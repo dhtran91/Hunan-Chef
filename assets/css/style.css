@@ -1,8 +1,3 @@
-/* *, a, .nav-wrapper a, .sidenav li>a {
-    font-family: 'Raleway', sans-serif;
-    color: rgb(255, 230, 204);
-} */
-
 a, .nav-wrapper a, .sidenav li>a, h1, h2, h3, h4, h5, h6 {
     color: rgb(255, 230, 204);
 }
@@ -15,6 +10,7 @@ a, .nav-wrapper a, .sidenav li>a, h1, h2, h3, h4, h5, h6 {
 /* ---------------------------------------------
 Body
 --------------------------------------------- */
+
 html {
     scroll-behavior: smooth;
 }
@@ -30,22 +26,12 @@ main {
     flex: 1 0 auto;
 }
 
-header {
-    top: 0;
-    position: absolute;
-}
-
-nav {
-    box-shadow: none;
-    background-color: transparent;
-}
-
 /* ---------------------------------------------
 Section
 --------------------------------------------- */
 
 .section-intro {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section-menu {
@@ -63,17 +49,13 @@ Section
     width: 100%;
     z-index: -1;
     background-color: black;
-    opacity: .4;
+    opacity: .55;
     top: 0;
 }
 
 /* ---------------------------------------------
 Parallax
 --------------------------------------------- */
-
-.parallax-container .container{
-    height:100%;
-}
 
 .parallax {
     width: 100%;
@@ -96,64 +78,75 @@ Parallax
 NavBar
 --------------------------------------------- */
 
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+    height: 4rem;
+    line-height: 4rem;
+}
+
 #navbar {
     transition: top 0.8s, background-color 0.5s;
+    box-shadow: none;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    padding: 0 1em;
 }
 
 .hunan-logo {
     height: 100%;
-    padding: .3em 0;
-    margin: 0 .3em 0 1em;
 }
 
+#navbar .hunan-logo {
+    padding: .3em 0;
+    margin: 0 .3em 0 .3em;
+}
 
 /* ---------------------------------------------
 Menu
 --------------------------------------------- */
 
-#menuSectionFilter button {
-    font-size: .75rem;
+#menuSectionFilters button {
+    font-size: .8em;
     font-weight: 400;
-    padding: 0 .2rem;
+    padding: 0 .8em;
     letter-spacing: .05rem;
     background-color: transparent;
     border-color: transparent;
     border-bottom: 2px solid transparent;
     height: 2rem;
-    margin: .5rem;
 }
 
-#menuSectionFilter .activeFilter {
+#menuSectionFilters button:hover {
+    cursor: pointer;
     color: rgb(255, 230, 204);
-    border-bottom-color: rgb(255, 230, 204);
-}
-
-.menu-item {
-    display: none;
-}
-
-.activeItem {
-    display: block !important;
-}
-
-.menu-item .container-fluid {
-    border-bottom: 1px solid #BFAC99;
-}
-
-.menu-item h6, .menu-item p {
-    margin-bottom: 0;
-}
-
-#menuSectionFilter button:hover {
-    color: rgb(255, 230, 204);
-    border-bottom-color: rgb(255, 230, 204);
     background-color: rgba(0,0,0,0.2);
 }
 
-#menuSectionFilter li {
+#menuSectionFilters .active-filter-btn {
+    color: rgb(255, 230, 204);
+    border-bottom-color: rgb(255, 230, 204);
+}
+
+#menuSectionFilters li {
     display: inline-block;
 }
 
+.menu-item {
+    margin-left: 0 !important;
+}
+
+#menuSectionItems {
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+.multi-price-row, .multi-price-row h6 {
+    margin: 0;
+}
+
+.show {
+    display: block !important;
+}
 
 /* ---------------------------------------------
 SideNav
@@ -188,7 +181,6 @@ SideNav
     vertical-align: middle;
 }
 
-
 /* ---------------------------------------------
 Links
 --------------------------------------------- */
@@ -197,9 +189,8 @@ Links
     cursor: pointer;
 }
 
-
 nav ul a, .footer-nav a, .sidenav .collection-header a {
-    position: relative;    
+    position: relative;
 }
 
 nav ul a::before, .footer-nav a::before, .sidenav .collection-header a::before {
@@ -219,7 +210,6 @@ nav ul a:hover::before, .footer-nav a:hover::before, .sidenav .collection-header
     visibility: visible;
     transform: scaleX(1);
 }
-
 
 /* ---------------------------------------------
 Footer
@@ -257,6 +247,10 @@ footer {
     color: rgb(255, 230, 204);
     background-color: black;
     line-height: .4;
+}
+
+#btnTop p {
+    margin: 0;
 }
 
 .social-btn {

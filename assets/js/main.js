@@ -1,3 +1,46 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const menuSectionFilters = document.getElementById('menuSectionFilters');
+    menuSectionFilters.appendChild(createMenuFilterBtns(Menu));
+
+    const menuSectionItems = document.getElementById("menuSectionItems");
+    let menuItems = "";
+    Menu.forEach(foodCategory => menuItems += createMenuItemDiv(foodCategory));
+    menuSectionItems.innerHTML = menuItems;
+
+    showMenu();
+
+    AOS.init();
+
+    const vp = window.matchMedia("(min-width: 992px)");
+    vp.addListener(handleMediaQuery);
+
+    // Initializize Materialize DOM Elements
+    const sideNav = document.querySelectorAll('.sidenav');
+    const sideNavInstances = M.Sidenav.init(sideNav, { "edge": "right" });
+    const toolTipped = document.querySelectorAll('.tooltipped');
+    const toolTippedinstances = M.Tooltip.init(toolTipped, {});
+
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener('scroll', function () {
+        const navBar = document.getElementById('navbar');
+        const intro = document.getElementById("sectionWelcome");
+        const introPos = intro.offsetTop;
+        let currScrollPos = window.scrollY;
+        
+        if (currScrollPos < introPos) {
+            navBar.style.top = "0px";
+            navBar.style.backgroundColor = "transparent";
+        } else if (prevScrollPos < currScrollPos) {
+            navBar.style.top = "-70px";
+        } else {
+            navBar.style.top = "0px";
+            navBar.style.backgroundColor = "black";
+        }
+        prevScrollPos = currScrollPos;
+    })
+});
+
 function MenuItem(foodCourse, itemName, itemDescription, price) {
     this.foodCourse = foodCourse;
     this.itemName = itemName;
@@ -50,13 +93,13 @@ const chefsSpecialties = [
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const healthFoodSelection = [
-    new MenuItem("Health Food Selection", "Steamed Mixed Vegetables", "", new Price(1, 7.50)),
-    new MenuItem("Health Food Selection", "Steamed Chicken with Vegetables", "", new Price(1, 8.50)),
-    new MenuItem("Health Food Selection", "Steamed Chicken with Broccoli", "", new Price(1, 8.50)),
-    new MenuItem("Health Food Selection", "Steamed Chicken with Snow Peas", "", new Price(1, 9.50)),
-    new MenuItem("Health Food Selection", "Steamed Shrimp with Vegetables", "", new Price(1, 10.95)),
-    new MenuItem("Health Food Selection", "Steamed Shrimp with Broccoli", "", new Price(1, 10.95)),
-    new MenuItem("Health Food Selection", "Steamed Shrimp with Snow Peas & Water Chestnuts", "", new Price(1, 11.95))
+    new MenuItem("Healthy Selections", "Steamed Mixed Vegetables", "", new Price(1, 7.50)),
+    new MenuItem("Healthy Selections", "Steamed Chicken with Vegetables", "", new Price(1, 8.50)),
+    new MenuItem("Healthy Selections", "Steamed Chicken with Broccoli", "", new Price(1, 8.50)),
+    new MenuItem("Healthy Selections", "Steamed Chicken with Snow Peas", "", new Price(1, 9.50)),
+    new MenuItem("Healthy Selections", "Steamed Shrimp with Vegetables", "", new Price(1, 10.95)),
+    new MenuItem("Healthy Selections", "Steamed Shrimp with Broccoli", "", new Price(1, 10.95)),
+    new MenuItem("Healthy Selections", "Steamed Shrimp with Snow Peas & Water Chestnuts", "", new Price(1, 11.95))
 ]
 
 // (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
@@ -132,7 +175,7 @@ const pork = [
     new MenuItem("Pork", "Moo Shu Pork", "Shredded pork with vegetables served with plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 9.50))
 ];
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
+// 
 const friedRiceAndNoodles = [
     new MenuItem("Fried Rice & Noodle", "Vegetables Fried Rice", "", new Price(1, 6.50)),
     new MenuItem("Fried Rice & Noodle", "Chicken & Pork Fried Rice", "", new Price(1, 6.50)),
@@ -158,10 +201,7 @@ const Menu = [
     friedRiceAndNoodles
 ];
 
-function createMenuFilterDiv(menu) {
-    let menuFilterDiv = document.createElement('div');
-    menuFilterDiv.classList.add('col', 's12', 'm12', 'l12', 'xl12', 'center-align');
-
+function createMenuFilterBtns(menu) {
     let ul = document.createElement('ul');
 
     menu.forEach((foodCategory, i) => {
@@ -180,19 +220,17 @@ function createMenuFilterDiv(menu) {
         li.appendChild(button)
         ul.appendChild(li);
     });
-
-    menuFilterDiv.appendChild(ul);
-    return menuFilterDiv;
+    
+    return ul;
 }
 
 function createMenuItemDiv(foodCategory) {
     let menuItemArea = "";
     foodCategory.forEach((menuItem) => {
         menuItemArea += `
-    <div class="col s6 m6 l4 xl4 menu-item" data-menu-item="${menuItem.foodCourse}">
-        <div class="container-fluid">
+    <div class="col s12 m6 l4 xl4 menu-item hide" data-menu-item="${menuItem.foodCourse}">
             <div class="row">
-                <div class="col s9 m9 l9 xl9">
+                <div class="col s8 m8 l8 xl8">
                     <h6>${menuItem.itemName}</h6>`
 
         if (menuItem.itemDescription) {
@@ -201,99 +239,88 @@ function createMenuItemDiv(foodCategory) {
 
         menuItemArea += `
     </div>
-    <div class="col s3 m3 l3 xl3">`
+    <div class="col s4 m3 l3 xl3 price-col right-align">`
 
         if (menuItem.price.length > 1) {
             menuItem.price.forEach((e) => {
-                menuItemArea += `<div class="row center-align">
+                menuItemArea += `<div class="row multi-price-row">
+                <h6>
                 (${e.priceType}) ${e.priceAmount.toFixed(2)}
+                </h6>
             </div>`
             })
         }
         else {
             menuItemArea += `
         <div class="row">
+        <h6>
         $${menuItem.price.priceAmount.toFixed(2)}
+        </h6>
         </div>
         `
         }
 
-        menuItemArea += `</div></div></div></div>`
+        menuItemArea += `</div></div></div>`
     })
 
     return menuItemArea;
 }
 
 function handleMenuFilter(menuCourse) {
-    let activeFilter = document.querySelector(`.activeFilter`);
-    activeFilter.classList.remove('activeFilter');
+    const menuSectionNotesDiv = document.getElementById('menuSectionNotes');
+
+    if((menuCourse === "Appetizers" || menuCourse === "Soup") && !menuSectionNotesDiv.classList.contains('hide')) {
+        menuSectionNotesDiv.classList.add('hide');
+    }
+    
+    if (menuCourse !== "Appetizers" && menuCourse !== "Soup" && menuSectionNotesDiv.classList.contains('hide')) {
+        menuSectionNotesDiv.classList.remove('hide');
+        menuSectionNotesDiv.dataset.aos="zoom-in-up";
+        menuSectionNotesDiv.dataset.aosOnce="true"
+    }
+
+    let activeFilter = document.querySelector(`.active-filter-btn`);
+    activeFilter.classList.remove('active-filter-btn');
 
     let selectedBtn = document.querySelector(`.menu-filter-btn[data-menu-food-course="${menuCourse}"]`);
-    selectedBtn.classList.add('activeFilter');
+    selectedBtn.classList.add('active-filter-btn');
 
-    let currentActive = document.querySelectorAll(`.activeItem`);
-    currentActive.forEach(e => e.classList.remove('activeItem'));
+    let currentActive = document.querySelectorAll(`.show`);
+    currentActive.forEach(e => {
+        e.classList.remove('show', 'aos-animate', 'aos-init');
+        e.removeAttribute('data-aos')
+    });
 
     let selectedFilter = document.querySelectorAll(`[data-menu-item="${menuCourse}"]`);
-    selectedFilter.forEach(e => e.classList.add('activeItem'))
+    selectedFilter.forEach(e => {
+        e.classList.add('show');
+        e.dataset.aos="zoom-in-up";
+        e.dataset.aosOnce="true"
+    })
+    AOS.refreshHard();
 }
 
 function showMenu() {
-    let activeFilter = document.querySelector(`activeFilter`);
-    if(activeFilter === null ) {
+    let activeFilter = document.querySelector(`active-filter-btn`);
+    if(activeFilter === null) {
         let activeBtn = document.querySelector('.menu-filter-btn')
-        activeBtn.classList.add('activeFilter');
+        activeBtn.classList.add('active-filter-btn');
+
+        const menuSectionNotesDiv = document.getElementById('menuSectionNotes');
+        menuSectionNotesDiv.classList.add('hide', 'center-align');
+        menuSectionNotesDiv.dataset.aos="zoom-in-up";
+        menuSectionNotesDiv.dataset.aosOnce="true"
+        let para = document.createElement('p');
+        para.innerText = 'Served with Steamed White or Brown Rice\nAdd $1.95 for Substitute Fried Rice';
+        menuSectionNotesDiv.appendChild(para);
+
         let items = document.querySelectorAll(`[data-menu-item="${activeBtn.dataset.menuFoodCourse}"]`);
-        items.forEach(i => i.classList.add('activeItem'))
+        items.forEach(e => {
+            e.classList.add('show');
+            e.dataset.aos="zoom-in-up";
+        })
     }
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    AOS.init();
-
-    const menuSectionFilter = document.getElementById('menuSectionFilter');
-    menuSectionFilter.appendChild(createMenuFilterDiv(Menu));
-
-    const menuSectionItems = document.getElementById("menuSectionItems");
-
-    let menuItems = "";
-    Menu.forEach((foodCategory) => {
-        menuItems += createMenuItemDiv(foodCategory);
-    })
-    
-    menuSectionItems.innerHTML = menuItems;
-
-    showMenu();
-
-
-    const vp = window.matchMedia("(min-width: 992px)");
-    vp.addListener(handleMediaQuery);
-
-    const sideNav = document.querySelectorAll('.sidenav');
-    const sideNavInstances = M.Sidenav.init(sideNav, { "edge": "right" });
-
-    const toolTipped = document.querySelectorAll('.tooltipped');
-    const toolTippedinstances = M.Tooltip.init(toolTipped, {});
-
-    let prevScrollPos = window.pageYOffset;
-
-    window.addEventListener('scroll', function () {
-        const navBar = document.getElementById('navbar');
-        const intro = document.getElementById("section-welcome");
-        let currScrollPos = this.window.scrollY;
-
-        if (currScrollPos < intro.offsetTop) {
-            navBar.style.top = "0px";
-            navBar.style.backgroundColor = "transparent";
-        } else if (prevScrollPos < currScrollPos) {
-            navBar.style.top = "-70px";
-        } else {
-            navBar.style.top = "0px";
-            navBar.style.backgroundColor = "black";
-        }
-        prevScrollPos = currScrollPos;
-    })
-});
 
 function handleMediaQuery(e) {
     //If vp width > 992
