@@ -1,13 +1,17 @@
+// document.addEventListener('onl')
+
 document.addEventListener('DOMContentLoaded', function () {
+    // Creating 
     const menuSectionFilters = document.getElementById('menuSectionFilters');
-    menuSectionFilters.appendChild(createMenuFilterBtns(Menu));
+    const menuFilterBtns = createMenuFilterBtns(Menu);
+    menuSectionFilters.appendChild(menuFilterBtns);
 
     const menuSectionItems = document.getElementById("menuSectionItems");
     let menuItems = "";
     Menu.forEach(foodCategory => menuItems += createMenuItemDiv(foodCategory));
     menuSectionItems.innerHTML = menuItems;
 
-    showMenu();
+    loadMenu();
 
     AOS.init();
 
@@ -17,18 +21,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initializize Materialize DOM Elements
     const sideNav = document.querySelectorAll('.sidenav');
     const sideNavInstances = M.Sidenav.init(sideNav, { "edge": "right" });
+
     const toolTipped = document.querySelectorAll('.tooltipped');
     const toolTippedinstances = M.Tooltip.init(toolTipped, {});
 
-    let prevScrollPos = window.pageYOffset;
+    document.querySelectorAll('.tooltipped').forEach((x,i) => {
+        x.addEventListener('mouseleave', function() {
+            let style = document.querySelectorAll('.material-tooltip')[i].style;
+            style.top = 0;
+            style.left = 0;
+        })
+    })
+
+    let prevScrollPos;
 
     window.addEventListener('scroll', function () {
         const navBar = document.getElementById('navbar');
-        const intro = document.getElementById("sectionWelcome");
+        const intro = document.querySelector('#parallax-1 .container');
+        
         const introPos = intro.offsetTop;
         let currScrollPos = window.scrollY;
-        
-        if (currScrollPos < introPos) {
+
+        if (currScrollPos <= introPos) {
             navBar.style.top = "0px";
             navBar.style.backgroundColor = "transparent";
         } else if (prevScrollPos < currScrollPos) {
@@ -37,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navBar.style.top = "0px";
             navBar.style.backgroundColor = "black";
         }
+
         prevScrollPos = currScrollPos;
     })
 });
@@ -77,7 +92,6 @@ const soups = [
     new MenuItem("Soup", "House Special Wonton Soup", "", new Price(2, 4.95))
 ]
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const chefsSpecialties = [
     new MenuItem("Chef's Specialties", "General Tso's Chicken", "Chucks of crispy boneless chicken, blended in a tasty sweet & sour and spicy brown sauce.", new Price(1, 10.50)),
     new MenuItem("Chef's Specialties", "Orange Flavored Chicken", "Chunks of chicken lightly breaded and glazed with a spicy orange peel sauce.", new Price(1, 10.50)),
@@ -91,7 +105,6 @@ const chefsSpecialties = [
     new MenuItem("Chef's Specialties", "Sizzling Scallop & Beef", "Sliced tenderloin of beef & fresh scallop sautéed with vegetable in a rich brown sauce, served on a sizzling plate.", new Price(1, 12.95))
 ]
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const healthFoodSelection = [
     new MenuItem("Healthy Selections", "Steamed Mixed Vegetables", "", new Price(1, 7.50)),
     new MenuItem("Healthy Selections", "Steamed Chicken with Vegetables", "", new Price(1, 8.50)),
@@ -102,7 +115,6 @@ const healthFoodSelection = [
     new MenuItem("Healthy Selections", "Steamed Shrimp with Snow Peas & Water Chestnuts", "", new Price(1, 11.95))
 ]
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const vegetables = [
     new MenuItem("Vegetables", "Mixed Vegetables", "Chinese cabbage, mushroom, water chestnut, broccoli & snow peas in white sauce.", new Price(1, 7.50)),
     new MenuItem("Vegetables", "Broccoli with Garlic Sauce", "Broccoli and water chestnuts sautéed in spicy garlic sauce.", new Price(1, 7.50)),
@@ -113,7 +125,6 @@ const vegetables = [
     new MenuItem("Vegetables", "Hot Braised String Beans", "Spicy string beans with minced pork.", new Price(1, 8.50))
 ]
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const poultry = [
     new MenuItem("Poultry", "Sweet & Sour Chicken", "Batter deep fried chicken with sweet & sour sauce.", new Price(1, 7.95)),
     new MenuItem("Poultry", "Moo Goo Gai Pan", "Sliced chicken with vegetables in white sauce.", new Price(1, 7.95)),
@@ -129,7 +140,6 @@ const poultry = [
     new MenuItem("Poultry", "Moo Shu Chicken", "Shredded chicken & vegetables with plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 9.50))
 ];
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const beef = [
     new MenuItem("Beef", "Pepper Steak", "Tender beef sautéed with green pepper and onion in brown sauce.", new Price(1, 9.95)),
     new MenuItem("Beef", "Beef with Broccoli", "Sliced tender beef with broccoli in brown sauce.", new Price(1, 9.95)),
@@ -143,7 +153,6 @@ const beef = [
     new MenuItem("Beef", "Moo Shu Beef", "Beef & vegetables plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 10.95))
 ];
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const seafood = [
     new MenuItem("Seafood", "Sweet & Sour Shrimp", "Battered fried shrimp with sweet and sour sauce.", new Price(1, 10.50)),
     new MenuItem("Seafood", "Kung Pao Shrimp", "Shrimp with diced vegetable and peanuts in spicy sauce.", new Price(1, 10.95)),
@@ -161,7 +170,6 @@ const seafood = [
     new MenuItem("Seafood", "Scallops with Vegetables", "Scallops sautéed with mix vegetables.", new Price(1, 12.95))
 ];
 
-// (Served with Steamed Rice, Add $1.95 for Substitute Fried Rice) Brown Rice Upon Requested
 const pork = [
     new MenuItem("Pork", "Sweet & Sour Pork", "Batter deep fried pork with sweet & sour sauce.", new Price(1, 7.95)),
     new MenuItem("Pork", "Pork with Garlic Sauce", "Shredded pork with shredded vegetables in spicy garlic sauce.", new Price(1, 8.50)),
@@ -175,7 +183,6 @@ const pork = [
     new MenuItem("Pork", "Moo Shu Pork", "Shredded pork with vegetables served with plum sauce. Served with 4 Pancakes. Additional 4 pancakes $1.50.", new Price(1, 9.50))
 ];
 
-// 
 const friedRiceAndNoodles = [
     new MenuItem("Fried Rice & Noodle", "Vegetables Fried Rice", "", new Price(1, 6.50)),
     new MenuItem("Fried Rice & Noodle", "Chicken & Pork Fried Rice", "", new Price(1, 6.50)),
@@ -209,7 +216,7 @@ function createMenuFilterBtns(menu) {
         let course = foodCategory[0].foodCourse;
         let button = document.createElement('button');
 
-        button.classList.add('menu-filter-btn');
+        button.classList = 'menu-filter-btn';
         button.type = "button";
         button.textContent = course.toUpperCase();
         button.dataset.menuFoodCourse = course;
@@ -220,7 +227,7 @@ function createMenuFilterBtns(menu) {
         li.appendChild(button)
         ul.appendChild(li);
     });
-    
+
     return ul;
 }
 
@@ -269,55 +276,52 @@ function createMenuItemDiv(foodCategory) {
 function handleMenuFilter(menuCourse) {
     const menuSectionNotesDiv = document.getElementById('menuSectionNotes');
 
-    if((menuCourse === "Appetizers" || menuCourse === "Soup") && !menuSectionNotesDiv.classList.contains('hide')) {
-        menuSectionNotesDiv.classList.add('hide');
+    if ((menuCourse === "Appetizers" || menuCourse === "Soup")) {
+        if (!menuSectionNotesDiv.classList.contains('hide')) {
+            menuSectionNotesDiv.classList.add('hide');
+        }
+    } else {
+        if(menuSectionNotesDiv.classList.contains('hide')) {
+            menuSectionNotesDiv.classList.remove('hide');
+        }
+        animateCss('#menuSectionNotes', 'fadeInUp')
     }
+
+    // Filter Btns
+    const previousFilter = document.querySelector(`.active-filter-btn`);
+    previousFilter.classList.remove('active-filter-btn');
+
+    const selectedFilterBtn = document.querySelector(`.menu-filter-btn[data-menu-food-course="${menuCourse}"]`);
+    selectedFilterBtn.classList.add('active-filter-btn');
     
-    if (menuCourse !== "Appetizers" && menuCourse !== "Soup" && menuSectionNotesDiv.classList.contains('hide')) {
-        menuSectionNotesDiv.classList.remove('hide');
-        menuSectionNotesDiv.dataset.aos="zoom-in-up";
-        menuSectionNotesDiv.dataset.aosOnce="true"
-    }
-
-    let activeFilter = document.querySelector(`.active-filter-btn`);
-    activeFilter.classList.remove('active-filter-btn');
-
-    let selectedBtn = document.querySelector(`.menu-filter-btn[data-menu-food-course="${menuCourse}"]`);
-    selectedBtn.classList.add('active-filter-btn');
-
-    let currentActive = document.querySelectorAll(`.show`);
-    currentActive.forEach(e => {
-        e.classList.remove('show', 'aos-animate', 'aos-init');
-        e.removeAttribute('data-aos')
+    // Filtered Items
+    const previousMenuItems = document.querySelectorAll(`.show`);
+    previousMenuItems.forEach(item => {
+        item.classList.remove('show');
     });
 
-    let selectedFilter = document.querySelectorAll(`[data-menu-item="${menuCourse}"]`);
-    selectedFilter.forEach(e => {
-        e.classList.add('show');
-        e.dataset.aos="zoom-in-up";
-        e.dataset.aosOnce="true"
-    })
-    AOS.refreshHard();
+    const selectedMenuItems = document.querySelectorAll(`[data-menu-item="${menuCourse}"]`);
+    selectedMenuItems.forEach(item => {
+        item.classList.add('show');
+    });
+    animateCss('#menuSectionItems', 'fadeInUp');
 }
 
-function showMenu() {
+function loadMenu() {
     let activeFilter = document.querySelector(`active-filter-btn`);
-    if(activeFilter === null) {
-        let activeBtn = document.querySelector('.menu-filter-btn')
-        activeBtn.classList.add('active-filter-btn');
+    if (activeFilter === null) {
+        const defaultMenuFilterBtn = document.querySelectorAll('.menu-filter-btn')[0];
+        defaultMenuFilterBtn.classList.add('active-filter-btn');
 
         const menuSectionNotesDiv = document.getElementById('menuSectionNotes');
         menuSectionNotesDiv.classList.add('hide', 'center-align');
-        menuSectionNotesDiv.dataset.aos="zoom-in-up";
-        menuSectionNotesDiv.dataset.aosOnce="true"
-        let para = document.createElement('p');
+        const para = document.createElement('p');
         para.innerText = 'Served with Steamed White or Brown Rice\nAdd $1.95 for Substitute Fried Rice';
         menuSectionNotesDiv.appendChild(para);
 
-        let items = document.querySelectorAll(`[data-menu-item="${activeBtn.dataset.menuFoodCourse}"]`);
+        const items = document.querySelectorAll(`[data-menu-item="${defaultMenuFilterBtn.dataset.menuFoodCourse}"]`);
         items.forEach(e => {
             e.classList.add('show');
-            e.dataset.aos="zoom-in-up";
         })
     }
 }
@@ -326,16 +330,22 @@ function handleMediaQuery(e) {
     //If vp width > 992
     if (e.matches) {
         //Close side nav 
-        const sideNav = document.querySelectorAll('.sidenav');
-        const sideNavInstances = M.Sidenav.getInstance(sideNav[0]);
+        const sideNav = document.querySelector('.sidenav');
+        const sideNavInstances = M.Sidenav.getInstance(sideNav);
         sideNavInstances.close();
-
-        //Move position of tooltip to right side
-        const toolTipped = document.querySelectorAll('.tooltipped');
-        toolTipped.forEach(x => x.dataset.position = "right");
-    } else {
-        //On vp with width < 992px, move position of tooltip to left side
-        const toolTipped = document.querySelectorAll('.tooltipped');
-        toolTipped.forEach(x => x.dataset.position = "left");
     }
+}
+
+function animateCss(element, animationName, callback) {
+    const node = document.querySelector(element)
+    node.classList.add('animated', animationName)
+
+    function handleAnimationEnd() {
+        node.classList.remove('animated', animationName)
+        node.removeEventListener('animationend', handleAnimationEnd)
+
+        if (typeof callback === 'function') callback()
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd)
 }

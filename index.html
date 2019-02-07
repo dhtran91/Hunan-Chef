@@ -17,116 +17,116 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Animate On Scroll CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate CSS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Real Favicon Generator -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <!-- Application CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav id="navbar">
-            <div class="nav-wrapper">
-                <img alt="Hunan Chef" class="hunan-logo hide-on-med-and-down" src="./assets/images/hunan-chef-logo.png" />
-                <a href="index.html" class="brand-logo left hide-on-med-and-down">
-                    Hunan Chef
-                </a>
-                <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#locationMap">Location/Hours</a></li>
-                    <li><a href="#locationInfo">Contact</a></li>
-                </ul>
+    <nav id="navbar">
+        <div class="nav-wrapper">
+
+            <a href="./index.html" class="brand hide-on-med-and-down">
+                <img alt="Hunan Chef" class="left brand-img" src="./assets/images/hunan-chef-logo.png" />
+                <span class="brand-name">Hunan Chef</span>
+            </a>
+
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#locationMap">Location/Hours</a></li>
+                <li><a href="#locationInfo">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav collection with-header container" id="slide-out">
+        <li class="collection-header">
+            <div class="sidenav-header">
+                <img src="./assets/images/hunan-chef-logo.png" class="brand-img" />
+                <h5>
+                    <a href="index.html">
+                        Hunan Chef
+                    </a>
+                </h5>
+                <i class="material-icons sidenav-close">chevron_right</i>
             </div>
-        </nav>
-        <ul class="sidenav collection with-header container" id="slide-out">
-            <li class="collection-header">
-                <div class="flex-container">
-                    <img src="./assets/images/hunan-chef-logo.png" class="hunan-logo" />
-                    <h5>
-                        <a href="index.html">
-                            Hunan Chef
-                        </a>
-                    </h5>
-                    <i class="material-icons sidenav-close">chevron_right</i>
-                </div>
-            </li>
-            <li><a class="sidenav-close" href="#menu">Menu</a></li>
-            <li><a class="sidenav-close" href="#locationMap">Location/Hours</a></li>
-            <li><a class="sidenav-close" href="#locationInfo">Contact</a></li>
-        </ul>
-    </header>
-    <main>
-        <section class="parallax-container section-intro valign-wrapper center-align container-fluid">
-            <div class="row" data-aos="zoom-in" data-aos-once="true" id="sectionWelcome">
-                <div class="col">
-                    <h1>WELCOME TO HUNAN CHEF</h1>
+        </li>
+        <li><a class="sidenav-close" href="#menu">Menu</a></li>
+        <li><a class="sidenav-close" href="#locationMap">Location/Hours</a></li>
+        <li><a class="sidenav-close" href="#locationInfo">Contact</a></li>
+    </ul>
+        <section class="valign-wrapper center-align parallax-section" id="parallax-1">
+            <div class="container animated tada">
+                <header>
+                    <h1>WELCOME<br>TO<br>HUNAN CHEF</h1>
                     <h6>CHINESE RESTAURANT / BUFFET</h6>
-                </div>
+                </header>
             </div>
-            <img class="parallax" />
-            <div class="overlay"></div>
+            <div class="parallax-overlay"></div>
         </section>
-        <section class="section container center-align text-section">
-            <h2 data-aos="zoom-in-up" data-aos-once="true">About Us</h2>
-            <p data-aos="zoom-in-up" data-aos-once="true">Located along I-10 with close proximity to the Memorial area and Spring Branch area, Hunan Chef features
-                authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve lunch
-                and
-                dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
-                affordable prices to keep your wallet full and your stomach even fuller!</p>
+        <section class="section center-align valign-wrapper">
+            <div class="container text-section">
+                <h2 data-aos="zoom-in-up" data-aos-once="true">About Us</h2>
+                <p data-aos="zoom-in-up" data-aos-once="true">Located along I-10 with close proximity to the Memorial
+                    area and Spring Branch area, Hunan Chef features
+                    authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve
+                    lunch
+                    and
+                    dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
+                    affordable prices to keep your wallet full and your stomach even fuller!</p>
+            </div>
         </section>
-        <section class="parallax-container section-menu valign-wrapper center-align container-fluid">
-            <noscript>
-                <div class="row">
-                    <div class="col">
-                        <a href="./assets/menu/hunan-chef-menu.pdf" target="_blank">
-                            <h2>VIEW OUR MENU</h2>
-                        </a>
-                    </div>
-                </div>
-            </noscript>
-            <img class="parallax" />
-            <div class="overlay"></div>
-        </section>
-        <section class="section container" id="menu">
-                <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
-                <div class="row center-align menu-section-filters" id="menuSectionFilters" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-once="true"></div>
-                <div id="menuSectionNotes"></div>
-                <div class="row" id="menuSectionItems"></div>
+        <section class="valign-wrapper center-align parallax-section" id="parallax-2">
+            <div class="parallax-overlay"></div>
         </section>
         <section class="section">
-            <div class="container center-align">
-                <div class="row">
-                    <div class="col s12 m9 l9 xl9">
-                        <iframe id="locationMap" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
-                &q=Hunan+Chef,Houston+TX&zoom=12"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div id="locationInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
-                        <section class="section">
-                            <h6>LOCATION</h6>
-                            <p>
-                                8404 Katy Fwy
-                                <br>Houston, TX 77024
-                            </p>
-                        </section>
-                        <section class="section">
-                            <h6>HOURS</h6>
-                            <p>
-                                Monday-Sunday
-                                <br>11AM-9:30PM
-                            </p>
-                        </section>
-                        <section class="section">
-                            <h6>CONTACT</h6>
-                            <p>
-                                (713) 984-8488
-                            </p>
-                        </section>
-                    </div>
-                </div>
+            <div class="container" id="menu">
+                <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
+                <div class="row center-align" id="menuSectionFilters" data-aos="zoom-in-up" data-aos-once="true"></div>
+                <div id="menuSectionNotes" data-aos="zoom-in-up" data-aos-once="true"></div>
+                <div class="row" id="menuSectionItems" data-aos="zoom-in-up" data-aos-once="true"></div>
             </div>
         </section>
-    </main>
+        <section class="section location-section container center-align">
+            <div class="row">
+                <div class="col s12 m9 l9 xl9">
+                <iframe id="locationMap" width="100%" height="450" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
+                &q=place_id:ChIJNfc3yxbEQIYRq6OEXE22hLU&zoom=12"
+                    allowfullscreen>
+                </iframe>
+                </div>
+                <div id="locationInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
+                    <section class="section">
+                        <h6>LOCATION</h6>
+                        <p>
+                            8404 Katy Fwy
+                            <br>Houston, TX 77024
+                        </p>
+                    </section>
+                    <section class="section">
+                        <h6>HOURS</h6>
+                        <p>
+                            Monday-Sunday
+                            <br>11AM-9:30PM
+                        </p>
+                    </section>
+                    <section class="section">
+                        <h6>CONTACT</h6>
+                        <p>
+                            (713) 984-8488
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+
     <footer>
         <a id="btnTop" href="#" class="tooltipped" data-position="right" data-tooltip="Back to top"><i class="material-icons">expand_less</i>
             <p>Top</p>
@@ -155,11 +155,11 @@
             </div>
         </div>
     </footer>
-
     <!-- Animate On Scroll JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Compiled and minified Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Application JS -->
     <script src="./assets/js/main.js"></script>
 </body>
 
