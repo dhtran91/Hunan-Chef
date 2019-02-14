@@ -1,16 +1,7 @@
-a, .nav-wrapper a, .sidenav li>a, h1, h2, h3, h4, h5, h6, .brand-name {
-    color: rgb(255, 230, 204);
-}
-
 * {
     font-family: 'Raleway', sans-serif;
     color: #BFAC99;
-    /* will-change: transform, opacity; */
 }
-
-/* ---------------------------------------------
-Body
---------------------------------------------- */
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +11,13 @@ body {
     background-color: #212121;
 }
 
+a, h1, h2, h3, h4, h5, h6, .brand-name {
+    color: rgb(255, 230, 204) !important;
+}
+
+.collection.with-header .collection-header, .sidenav, footer, #btnTop {
+    background-color: black;
+}
 
 /* ---------------------------------------------
 Brand
@@ -27,15 +25,12 @@ Brand
 
 .brand {
     height: inherit;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
 }
 
 .brand .brand-img {
     margin-right: .2em;
     padding: .2em 0;
-}
-
-.brand-img {
     height: 100%;
 }
 
@@ -43,13 +38,18 @@ Brand
 Section
 --------------------------------------------- */
 
-section {
-    position: relative;
+.content {
+    padding: 2rem 0 3rem;
 }
 
 .text-section {
-    max-width: 45em;
     line-height: 2;
+    max-width: 36em;
+    letter-spacing: 1px;
+}
+
+#locationSectionInfo section>p {
+    margin: 0;
 }
 
 /* ---------------------------------------------
@@ -63,6 +63,7 @@ Parallax
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
+    position: relative;
 }
 
 .parallax-overlay {
@@ -76,7 +77,6 @@ Parallax
 #parallax-1 {
     height: 35em;
     min-height: 100vh;
-    
 }
 
 #parallax-2 {
@@ -84,7 +84,7 @@ Parallax
     min-height: 20vh;
 }
 
-.parallax-section .container {
+.parallax-section header {
     z-index: 1;
 }
 
@@ -99,13 +99,17 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 
 #navbar {
     transition: top 0.8s, background-color 0.5s;
-    box-shadow: none;
     background-color: transparent;
     z-index: 2;
     padding: 0 1em;
     position: fixed;
+    box-shadow: none;
 }
 
+nav ul a, .sidenav li>a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
 /* ---------------------------------------------
 Menu
@@ -113,7 +117,6 @@ Menu
 
 #menuSectionFilters button {
     font-size: .8em;
-    font-weight: 400;
     padding: 0 .8em;
     letter-spacing: .05rem;
     background-color: transparent;
@@ -164,11 +167,6 @@ SideNav
 
 .sidenav {
     width: 260px;
-    background-color: black;
-}
-
-.collection.with-header .collection-header, .sidenav {
-    background-color: black;
 }
 
 .sidenav-header {
@@ -178,14 +176,13 @@ SideNav
     height: 48px;
 }
 
-
-/* ---------------------------------------------
-Links
---------------------------------------------- */
-
 .material-icons.sidenav-close {
     cursor: pointer;
 }
+
+/* ---------------------------------------------
+Anchor Tag
+--------------------------------------------- */
 
 nav ul a, .footer-nav a{
     position: relative;
@@ -215,7 +212,6 @@ Footer
 
 footer {
     padding: 2em 0 1em 0;
-    background-color: black;
     position: relative;
 }
 
@@ -247,7 +243,6 @@ footer .row {
     font-weight: 700;
     font-size: .9rem;
     color: rgb(255, 230, 204);
-    background-color: black;
     line-height: .4;
 }
 
@@ -293,7 +288,7 @@ Media Queries
 }
 
 @media only screen and (max-width: 600px){
-    #parallax-1 .container, .location-section {
+    .location-container {
         width: 100%
     }
 }

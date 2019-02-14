@@ -29,115 +29,96 @@
 <body>
     <nav id="navbar">
         <div class="nav-wrapper">
-
-            <a href="./index.html" class="brand hide-on-med-and-down">
+            <a href="#top" class="brand hide-on-med-and-down">
                 <img alt="Hunan Chef" class="left brand-img" src="./assets/images/hunan-chef-logo.png" />
                 <span class="brand-name">Hunan Chef</span>
             </a>
-
-
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#locationMap">Location/Hours</a></li>
-                <li><a href="#locationInfo">Contact</a></li>
+                <li><a href="#menuSection">Menu</a></li>
+                <li><a href="#locationSectionMap">Location/Hours</a></li>
+                <li><a href="#locationSectionInfo">Contact</a></li>
             </ul>
         </div>
     </nav>
     <ul class="sidenav collection with-header container" id="slide-out">
         <li class="collection-header">
             <div class="sidenav-header">
-                <img src="./assets/images/hunan-chef-logo.png" class="brand-img" />
-                <h5>
-                    <a href="index.html">
-                        Hunan Chef
-                    </a>
-                </h5>
+                <a href="#top" class="brand">
+                    <img alt="Hunan Chef" class="left brand-img" src="./assets/images/hunan-chef-logo.png" />
+                    <span class="brand-name">Hunan Chef</span>
+                </a>
                 <i class="material-icons sidenav-close">chevron_right</i>
             </div>
         </li>
-        <li><a class="sidenav-close" href="#menu">Menu</a></li>
-        <li><a class="sidenav-close" href="#locationMap">Location/Hours</a></li>
-        <li><a class="sidenav-close" href="#locationInfo">Contact</a></li>
+        <li><a class="sidenav-close" href="#menuSection">Menu</a></li>
+        <li><a class="sidenav-close" href="#locationSectionMap">Location/Hours</a></li>
+        <li><a class="sidenav-close" href="#locationSectionInfo">Contact</a></li>
     </ul>
-        <section class="valign-wrapper center-align parallax-section" id="parallax-1">
-            <div class="container">
-                <header>
-                    <h1>WELCOME<br>TO<br>HUNAN CHEF</h1>
-                    <h6>CHINESE RESTAURANT / BUFFET</h6>
-                </header>
-            </div>
-            <div class="parallax-overlay"></div>
-        </section>
-        <section class="section center-align valign-wrapper">
-            <div class="container text-section">
-                <h2 data-aos="zoom-in-up" data-aos-once="true">About Us</h2>
-                <p data-aos="zoom-in-up" data-aos-once="true">Located along I-10 with close proximity to the Memorial
-                    area and Spring Branch area, Hunan Chef features
-                    authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve
-                    lunch
-                    and
-                    dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
-                    affordable prices to keep your wallet full and your stomach even fuller!</p>
-            </div>
-        </section>
-        <section class="valign-wrapper center-align parallax-section" id="parallax-2">
-            <div class="parallax-overlay"></div>
-        </section>
-        <section class="section">
-            <div class="container" id="menu">
-                <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
-                <div class="row center-align" id="menuSectionFilters" data-aos="zoom-in-up" data-aos-once="true"></div>
-                <div id="menuSectionNotes" data-aos="zoom-in-up" data-aos-once="true"></div>
-                <div class="row" id="menuSectionItems" data-aos="zoom-in-up" data-aos-once="true"></div>
-            </div>
-        </section>
-        <section class="section location-section container center-align">
-            <div class="row">
-                <div class="col s12 m9 l9 xl9">
-                <iframe id="locationMap" width="100%" height="450" frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
+    <section class="valign-wrapper center-align parallax-section" id="parallax-1">
+        <header class="container">
+            <h1>WELCOME<br>TO<br>HUNAN CHEF</h1>
+            <h6>CHINESE RESTAURANT / BUFFET</h6>
+        </header>
+        <div class="parallax-overlay"></div>
+    </section>
+    <section class="content center-align container text-section">
+        <h2 data-aos="zoom-in-up" data-aos-once="true">About Us</h2>
+        <p data-aos="zoom-in-up" data-aos-once="true">Located along I-10 with close proximity to the Memorial
+            area and Spring Branch area, Hunan Chef features
+            authentic, fresh, and tasty cuisines from Sichuan, Hunan, and Cantonese region of China. We serve
+            lunch
+            and
+            dinner 7 days a week. So whether if you’re craving all-you-can-eat or individual plates, we offer
+            affordable prices to keep your wallet full and your stomach even fuller!</p>
+    </section>
+    <section class="valign-wrapper center-align parallax-section" id="parallax-2">
+        <div class="parallax-overlay"></div>
+    </section>
+    <section class="content container" id="menuSection">
+        <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
+        <div class="row center-align" id="menuSectionFilters" data-aos="zoom-in-up" data-aos-once="true"></div>
+        <div id="menuSectionNotes" data-aos="zoom-in-up" data-aos-once="true"></div>
+        <div class="row" id="menuSectionItems" data-aos="zoom-in-up" data-aos-once="true"></div>
+    </section>
+    <section class="content location-container container center-align">
+        <div class="row">
+            <section id="locationSectionMap" class="col s12 m9 l9 xl9">
+                <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
                 &q=place_id:ChIJNfc3yxbEQIYRq6OEXE22hLU&zoom=12"
                     allowfullscreen>
                 </iframe>
-                </div>
-                <div id="locationInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
-                    <section class="section">
-                        <h6>LOCATION</h6>
-                        <p>
-                            8404 Katy Fwy
-                            <br>Houston, TX 77024
-                        </p>
-                    </section>
-                    <section class="section">
-                        <h6>HOURS</h6>
-                        <p>
-                            Monday-Sunday
-                            <br>11AM-9:30PM
-                        </p>
-                    </section>
-                    <section class="section">
-                        <h6>CONTACT</h6>
-                        <p>
-                            (713) 984-8488
-                        </p>
-                    </section>
-                </div>
-            </div>
+            </section>
+            <section id="locationSectionInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
+                <section class="section">
+                    <h6>LOCATION</h6>
+                    <p>8404 Katy Fwy</p>
+                    <p>Houston, TX 77024</p>
+                </section>
+                <section class="section">
+                    <h6>HOURS</h6>
+                    <p>Monday-Sunday</p>
+                    <p>11AM-9:30PM</p>
 
-        </section>
-
+                </section>
+                <section class="section">
+                    <h6>CONTACT</h6>
+                    <p>(713) 984-8488</p>
+                </section>
+            </section>
+        </div>
+    </section>
     <footer>
-        <a id="btnTop" href="#" class="tooltipped" data-position="right" data-tooltip="Back to top"><i class="material-icons">expand_less</i>
-            <p>Top</p>
-        </a>
         <div class="container center-align">
+            <a id="btnTop" href="#" class="tooltipped" data-position="right" data-tooltip="Back to top"><i class="material-icons">expand_less</i>
+                <p>Top</p>
+            </a>
             <div class="row">
                 <div class="col s8 offset-s2 offset-m2 m8 offset-l2 l8 offset-xl2 xl8">
                     <ul class="footer-nav">
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#locationMap">Location/Hour</a></li>
-                        <li><a href="#locationInfo">Contact</a></li>
+                        <li><a href="#menuSection">Menu</a></li>
+                        <li><a href="#locationSectionMap">Location/Hour</a></li>
+                        <li><a href="#locationSectionInfo">Contact</a></li>
                     </ul>
                     <small>&copy; Hunan Chef. All rights reserved.</small>
                 </div>
