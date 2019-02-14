@@ -1,7 +1,4 @@
-// document.addEventListener('onl')
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Creating 
     const menuSectionFilters = document.getElementById('menuSectionFilters');
     const menuFilterBtns = createMenuFilterBtns(Menu);
     menuSectionFilters.appendChild(menuFilterBtns);
@@ -346,6 +343,6 @@ function animateCss(element, animationName, callback) {
 
         if (typeof callback === 'function') callback()
     }
-
+    
     node.addEventListener('animationend', handleAnimationEnd)
 }
