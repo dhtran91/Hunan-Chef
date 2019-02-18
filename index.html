@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hunan Chef Chinese Resturant</title>
+    <title>Hunan Chef Chinese Restaurant</title>
     <!-- Google Raleway Font -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- Google Material Icons -->
@@ -35,30 +35,40 @@
             </a>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#menuSection">Menu</a></li>
-                <li><a href="#locationSectionMap">Location/Hours</a></li>
-                <li><a href="#locationSectionInfo">Contact</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <ul class="sidenav collection with-header container" id="slide-out">
-        <li class="collection-header">
-            <div class="sidenav-header">
-                <a href="#top" class="brand">
-                    <img alt="Hunan Chef" class="left brand-img" src="./assets/images/hunan-chef-logo.png" />
-                    <span class="brand-name">Hunan Chef</span>
-                </a>
-                <i class="material-icons sidenav-close">chevron_right</i>
-            </div>
-        </li>
-        <li><a class="sidenav-close" href="#menuSection">Menu</a></li>
-        <li><a class="sidenav-close" href="#locationSectionMap">Location/Hours</a></li>
-        <li><a class="sidenav-close" href="#locationSectionInfo">Contact</a></li>
-    </ul>
+
+    <div class="sidenav" id="slide-out">
+        <i class="sidenav-exit material-icons sidenav-close">chevron_right</i>
+            <a href="#top" class="sidenav-close">
+                <img alt="Hunan Chef" class="sidenav-logo-img" src="./assets/images/hunan-chef-logo.png" />
+                <div class="sidenav-logo-name">Hunan Chef</div>
+            </a>
+        <ul class="sidenav-menu-container">
+            <li><a class="sidenav-close" href="#menu">Menu</a></li>
+            <li><a class="sidenav-close" href="#location">Location/Hours</a></li>
+            <li><a class="sidenav-close" href="#contact">Contact</a></li>
+        </ul>
+        <div class="sidenav-footer">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/Hunan-Chef-at-Katy-Freeway-175964079099975/" class="btn-floating social-btn fb-btn"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+            </ul>
+            <small>© Hunan Chef. All rights reserved.</small>
+        </div>
+    </div>
     <section class="valign-wrapper center-align parallax-section" id="parallax-1">
         <header class="container">
-            <h1>WELCOME<br>TO<br>HUNAN CHEF</h1>
-            <h6>CHINESE RESTAURANT / BUFFET</h6>
+            <h1 style="text-transform: uppercase">Welcome<br>to<br>Hunan Chef</h1>
+            <h6 style="text-transform: lowercase">Chinese Restaurant / Buffet</h6>
         </header>
         <div class="parallax-overlay"></div>
     </section>
@@ -75,7 +85,7 @@
     <section class="valign-wrapper center-align parallax-section" id="parallax-2">
         <div class="parallax-overlay"></div>
     </section>
-    <section class="content container" id="menuSection">
+    <section class="content container" id="menu">
         <h2 class="center-align" data-aos="zoom-in-up" data-aos-once="true">Menu</h2>
         <div class="row center-align" id="menuSectionFilters" data-aos="zoom-in-up" data-aos-once="true"></div>
         <div id="menuSectionNotes" data-aos="zoom-in-up" data-aos-once="true"></div>
@@ -83,13 +93,13 @@
     </section>
     <section class="content location-container container center-align">
         <div class="row">
-            <section id="locationSectionMap" class="col s12 m9 l9 xl9">
+            <section id="location" class="col s12 m9 l9 xl9">
                 <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA65uYDUgQfQ4qA3fNr95QqWmgGbMTwVfo
                 &q=place_id:ChIJNfc3yxbEQIYRq6OEXE22hLU&zoom=12"
                     allowfullscreen>
                 </iframe>
             </section>
-            <section id="locationSectionInfo" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
+            <section id="contact" class="col s12 m3 l3 xl3" data-aos="flip-right" data-aos-once="true">
                 <section class="section">
                     <h6>LOCATION</h6>
                     <p>8404 Katy Fwy</p>
@@ -116,9 +126,9 @@
             <div class="row">
                 <div class="col s8 offset-s2 offset-m2 m8 offset-l2 l8 offset-xl2 xl8">
                     <ul class="footer-nav">
-                        <li><a href="#menuSection">Menu</a></li>
-                        <li><a href="#locationSectionMap">Location/Hour</a></li>
-                        <li><a href="#locationSectionInfo">Contact</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#location">Location/Hour</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <small>&copy; Hunan Chef. All rights reserved.</small>
                 </div>
