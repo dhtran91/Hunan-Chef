@@ -1,24 +1,55 @@
-* {
+/* Default Style */
+
+html, body {
     font-family: 'Raleway', sans-serif;
-    color: #BFAC99;
-}
-
-p {
     color: rgba(191, 172, 153, 0.7);
-}
-
-html {
+    /* color: #BFAC99; */
+    background-color:#212121;
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #212121;
+a, h1, h2, h3, h4, h5, h6, nav a, nav ul a, #btnTop, .menu-filter-btn, .sidenav a, .sidenav li>a , .material-tooltip, .subtitle {
+    color: #FFE6CC;
 }
 
-a, h1, h2, h3, h4, h5, h6, .brand-name, #btnTop p {
-    color: rgb(255, 230, 204) !important;
+.title {
+    font-size: 4.2rem;
+    line-height: 1.2;
+    margin: 2rem 0;
 }
 
+.subtitle {
+    font-size:1.15rem;
+}
+
+.subheading {
+
+}
+
+/* Structural Elements */
+
+section {
+    padding: 3rem 0;
+}
+
+.flex-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    z-index:2;
+}
+
+header, .subheading {
+    text-align:center
+}
+
+/* Side Nav */
+.sidenav-trigger:hover {
+    cursor: pointer;
+}
 
 .collection.with-header .collection-header, .sidenav, footer, #btnTop {
     background-color: #141414;
@@ -29,7 +60,6 @@ Brand
 --------------------------------------------- */
 
 .brand {
-    height: inherit;
     font-size: 1.8rem;
 }
 
@@ -43,9 +73,9 @@ Brand
 Section
 --------------------------------------------- */
 
-.content {
+/* .content {
     padding: 2rem 0 3rem;
-}
+} */
 
 .text-section {
     line-height: 2;
@@ -77,6 +107,8 @@ Parallax
     width: 100%;
     background-color: black;
     opacity: .6;
+    top:0;
+    left:0;
 }
 
 #parallax-1 {
@@ -307,11 +339,6 @@ footer .row {
     margin: 0;
 }
 
-.social-btn {
-    /* margin: 5px 0; */
-    /* border-radius: 50%; */
-}
-
 .social-btn:hover {
     opacity: 0.7;
 }
@@ -325,22 +352,59 @@ footer .row {
 Media Queries
 --------------------------------------------- */
 
-@media only screen and (orientation: landscape){
+/* mobile first design */
+/* 
     #parallax-1 {
-        background-image: url('../images/wide-buffet.jpg');
-        /* background-image: url('../images/wide-buffet-2.jpg'); */
+        background-image: url('../images/chef-dough-mobile-portrait.jpg');
     }
     #parallax-2 {
-        background-image: url('../images/wide-hunan-chef-fortune-cookie.jpg');
+        background-image: url('../images/fortune-cookie-mobile-portrait.jpg');
+    }
+
+@media only screen and (orientation: landscape) {
+    #parallax-1 {
+        background-image: url('../images/buffet-mobile-landscape.jpg');
+    }
+    #parallax-2 {
+        background-image: url('../images/fortune-cookie-mobile-landscape.jpg');
     }
 }
-@media only screen and (orientation: portrait){
-    #parallax-1 {
-        background-image: url('../images/tall-chef-dough.jpg');
-        /* background-image: url('../images/tall-chef-dough-2.jpg'); */
+
+@media only screen and (orientation: landscape) and (min-width: 992px) {
+#parallax-1 {
+        background-image: url('../images/chef-dough-mobile.jpg');
     }
     #parallax-2 {
-        background-image: url('../images/tall-hunan-chef-fortune-cookie.jpg');
+        background-image: url('../images/fortune-cookie-mobile.jpg');
+    }
+}
+*/
+
+@media only screen and (orientation: landscape){
+    #parallax-1 {
+        background-image: url('../images/buffet.jpg');
+        
+    }
+    #parallax-2 {
+        background-image: url('../images/fortune-cookie.jpg');
+    }
+}
+
+@media only screen and (orientation: portrait){
+    #parallax-1 {
+        background-image: url('../images/chef-dough-mobile.jpg');
+    }
+    #parallax-2 {
+        background-image: url('../images/fortune-cookie-mobile.jpg');
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width:600px){
+    #parallax-1 {
+        background-image: url('../images/chef-dough-mobile.jpg');
+    }
+    #parallax-2 {
+        background-image: url('../images/fortune-cookie-mobile.jpg');
     }
 }
 
@@ -362,3 +426,14 @@ Media Queries
         background-attachment: fixed;
       }
 } 
+
+@media only screen and (min-width: 600px) {
+    .menu-tabs {
+        /* display: none !important; */
+    }
+}
+
+/* Mobile Devices <= 600px
+Tablet Devices > 600px	
+Desktop Devices > 992px	
+Large Desktop Devices > 1200px */
