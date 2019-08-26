@@ -1,21 +1,38 @@
-/* Default Style */
-
+/* ---------------------------------------------
+Default Style
+--------------------------------------------- */
 html, body {
-    font-family: 'Raleway', sans-serif;
-    color: rgba(191, 172, 153, 0.7);
-    /* color: #BFAC99; */
+    font-family: 'Raleway', Arial, sans-serif;
     background-color:#212121;
     scroll-behavior: smooth;
+    color: rgba(191, 172, 153, 0.7);
 }
 
-a, h1, h2, h3, h4, h5, h6, nav a, nav ul a, #btnTop, .menu-filter-btn, .sidenav a, .sidenav li>a , .material-tooltip, .subtitle {
+main {
+    text-align: center;
+}
+
+.sidenav, footer, #btnTop {
+    background-color: #141414;
+}
+
+/* ---------------------------------------------
+Color for Headers, Links, Btns
+--------------------------------------------- */
+.title, .subtitle, .subheading, .subheading-2, 
+.navbar-nav li>a, .sidenav-trigger, .sidenav-nav li>a, footer a,  
+.material-tooltip, .menu-filter-btn   {
     color: #FFE6CC;
 }
 
+/* ---------------------------------------------
+Headers Fonts
+--------------------------------------------- */
 .title {
     font-size: 4.2rem;
     line-height: 1.2;
     margin: 2rem 0;
+    text-transform: uppercase;
 }
 
 .subtitle {
@@ -23,76 +40,105 @@ a, h1, h2, h3, h4, h5, h6, nav a, nav ul a, #btnTop, .menu-filter-btn, .sidenav 
 }
 
 .subheading {
-
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 2.3733333333rem 0 1.424rem 0
 }
 
-/* Structural Elements */
+.subheading-2 {
+    font-size: 1.15rem;
+    line-height: 110%;
+    margin: .7666666667rem 0 .46rem 0;
+}
 
-section {
+.hidden {
+    display: none;
+}
+
+/* ---------------------------------------------
+Structural Elements
+--------------------------------------------- */
+main>section+section {
     padding: 3rem 0;
 }
 
 .flex-container {
     display:flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.parallax-bg.flex-container {
     justify-content: center;
 }
 
-.header {
-    z-index:2;
-}
-
-header, .subheading {
-    text-align:center
-}
-
-/* Side Nav */
-.sidenav-trigger:hover {
-    cursor: pointer;
-}
-
-.collection.with-header .collection-header, .sidenav, footer, #btnTop {
-    background-color: #141414;
+article section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* ---------------------------------------------
-Brand
+Content
 --------------------------------------------- */
-
-.brand {
-    font-size: 1.8rem;
+.intro {
+    z-index: 1
 }
-
-.brand .brand-img {
-    margin-right: .2em;
-    padding: .2em 0;
-    height: 100%;
-}
-
-/* ---------------------------------------------
-Section
---------------------------------------------- */
-
-/* .content {
-    padding: 2rem 0 3rem;
-} */
 
 .text-section {
     line-height: 2;
     max-width: 36em;
     letter-spacing: 1px;
+    margin: 0 auto;
 }
 
-#contact section>p {
-    margin: 0;
+/* ---------------------------------------------
+Brand
+--------------------------------------------- */
+.brand {
+    height: inherit;
+    font-size: 2rem;
+    color: #FFE6CC;
+    vertical-align: top;
+}
+
+.brand .logo {
+    padding: .2em 0;
+    height: 100%;
+}
+
+/* ---------------------------------------------
+NavBar
+--------------------------------------------- */
+#navbar {
+    height: 4rem;
+    line-height: 4rem;
+    position: fixed;
+    box-shadow: none;
+    padding: 0 1em;
+    z-index: 2;
+    transition: transform 0.5s, background-color 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    will-change: transform, background-color;
+}
+
+#navbar.hide-navbar {
+    transform: translateY(-70px);
+}
+
+#navbar.navbar-black {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.navbar-nav>li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* ---------------------------------------------
 Parallax
 --------------------------------------------- */
-
-.parallax-section {
-    background-attachment: scroll;
+.parallax-bg {
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,45 +158,26 @@ Parallax
 }
 
 #parallax-1 {
-    height: 35em;
+    background-image: url('../images/chef-dough-mobile.jpg');
     min-height: 100vh;
 }
 
 #parallax-2 {
+    background-image: url('../images/fortune-cookie-mobile.jpg');
     height: 15em;
-    min-height: 20vh;
-}
-
-.parallax-section header {
-    z-index: 1;
-}
-
-/* ---------------------------------------------
-NavBar
---------------------------------------------- */
-
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-    height: 4rem;
-    line-height: 4rem;
-}
-
-#navbar {
-    transition: top 0.8s, background-color 0.5s;
-    background-color: transparent;
-    z-index: 2;
-    padding: 0 1em;
-    position: fixed;
-    box-shadow: none;
-}
-
-nav ul a {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    min-height: 30vh;
 }
 
 /* ---------------------------------------------
 Menu
 --------------------------------------------- */
+#menuSectionFilters {
+    margin-bottom: 20px;
+}
+
+#menuSectionFilters li {
+    display: inline-block;
+}
 
 #menuSectionFilters button {
     font-size: .8em;
@@ -168,44 +195,42 @@ Menu
     background-color: rgba(0,0,0,0.2);
 }
 
-#menuSectionFilters .active-filter-btn {
+#menuSectionFilters .active-filter {
     color: rgb(255, 230, 204);
     border-bottom-color: rgb(255, 230, 204);
 }
 
-#menuSectionFilters li {
-    display: inline-block;
-}
-
 .menu-item {
     margin-left: 0 !important;
+    display: none;
+}
+
+.show, #menuSectionNotes.show {
+    display: block;
 }
 
 #menuSectionItems {
     display: flex;
-    flex-flow: row wrap;    
+    flex-flow: row wrap;
+    text-align:left;    
 }
 
-.multi-price-row, .multi-price-row h6 {
+.price-col p~p {
     margin: 0;
 }
 
-.show {
-    display: block !important;
+#menuSectionNotes {
+    display: none;
 }
 
 /* ---------------------------------------------
 SideNav
 --------------------------------------------- */
-
 .sidenav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     width: 260px;
     background-color: #141414;
     height: 100%;
+    justify-content: space-around;
     padding: 0;
 }
 
@@ -224,55 +249,54 @@ SideNav
     cursor: pointer;
 }
 
-.sidenav-logo-img {
-    display: block;
-    margin: 0 auto;
-    height: 60px;
+.sidenav-logo {
+    height: 100%;
 }
 
-.sidenav-logo-name {
-    font-size: 2rem;
-}
-
-.sidenav-menu-container {
+.sidenav-nav {
     width: 100%;
     text-align: center;
-}
-
-.sidenav-menu-container li>a {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.sidenav-menu-container li>a:hover {
+.sidenav.flex-container .sidenav-brand, 
+.sidenav.flex-container .sidenav-footer {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidenav-nav li>a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidenav-nav li>a:hover {
     background-color: #5F564C;
 }
 
-.sidenav-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidenav-footer .social-btn {
+.sidenav-footer>ul>li>.social-btn {
     width: 2.5em;
     height: 2.5em;
     line-height: 2.5em;
+    padding:0;
 }
 
 .sidenav-footer .social-btn>i {
     width: inherit;
-    display: inline-block;
-    text-align: center;
     color: #fff;
-    font-size: 1.6rem;
     line-height: 40px;
+    margin:0;
+}
+
+.sidenav-trigger:hover {
+    cursor: pointer;
 }
 
 /* ---------------------------------------------
-Anchor Tag
+Underline on Hover Effect
 --------------------------------------------- */
-
 nav ul a, .footer-nav a{
     position: relative;
 }
@@ -298,18 +322,14 @@ nav ul a:hover::before, .footer-nav a:hover::before{
 /* ---------------------------------------------
 Footer
 --------------------------------------------- */
-
 footer {
     padding: 2em 0 1em 0;
     position: relative;
 }
 
-footer .row {
-    margin-bottom: 0;
-}
-
-.footer-nav li a {
-    padding: 0 .2rem;
+.fa-angle-up {
+    font-size: 24px;
+    display: block;
 }
 
 #btnTop {
@@ -339,78 +359,39 @@ footer .row {
     margin: 0;
 }
 
-.social-btn:hover {
-    opacity: 0.7;
+#contact section>p {
+    margin: 0;
 }
 
+/* ---------------------------------------------
+Social Media
+--------------------------------------------- */
 .fb-btn {
     background-color: #3B5998 !important;
     orientation: portrait;
+}
+
+.social-btn:hover {
+    opacity: 0.7;
 }
 
 /* ---------------------------------------------
 Media Queries
 --------------------------------------------- */
 
-/* mobile first design */
-/* 
-    #parallax-1 {
-        background-image: url('../images/chef-dough-mobile-portrait.jpg');
-    }
-    #parallax-2 {
-        background-image: url('../images/fortune-cookie-mobile-portrait.jpg');
-    }
-
-@media only screen and (orientation: landscape) {
-    #parallax-1 {
-        background-image: url('../images/buffet-mobile-landscape.jpg');
-    }
-    #parallax-2 {
-        background-image: url('../images/fortune-cookie-mobile-landscape.jpg');
-    }
-}
-
-@media only screen and (orientation: landscape) and (min-width: 992px) {
-#parallax-1 {
-        background-image: url('../images/chef-dough-mobile.jpg');
-    }
-    #parallax-2 {
-        background-image: url('../images/fortune-cookie-mobile.jpg');
-    }
-}
-*/
-
-@media only screen and (orientation: landscape){
+@media only screen and (min-width: 992px){
     #parallax-1 {
         background-image: url('../images/buffet.jpg');
-        
     }
+
     #parallax-2 {
         background-image: url('../images/fortune-cookie.jpg');
     }
 }
 
-@media only screen and (orientation: portrait){
+@media only screen and (orientation: landscape){
     #parallax-1 {
-        background-image: url('../images/chef-dough-mobile.jpg');
-    }
-    #parallax-2 {
-        background-image: url('../images/fortune-cookie-mobile.jpg');
-    }
-}
-
-@media only screen and (orientation: landscape) and (max-width:600px){
-    #parallax-1 {
-        background-image: url('../images/chef-dough-mobile.jpg');
-    }
-    #parallax-2 {
-        background-image: url('../images/fortune-cookie-mobile.jpg');
-    }
-}
-
-@media only screen and (max-width: 600px){
-    .location-container {
-        width: 100%
+        background-image: url('../images/buffet.jpg');
     }
 }
 
@@ -419,21 +400,3 @@ Media Queries
         display: none !important;
     }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .parallax-section {
-        background-attachment: fixed;
-      }
-} 
-
-@media only screen and (min-width: 600px) {
-    .menu-tabs {
-        /* display: none !important; */
-    }
-}
-
-/* Mobile Devices <= 600px
-Tablet Devices > 600px	
-Desktop Devices > 992px	
-Large Desktop Devices > 1200px */
