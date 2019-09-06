@@ -138,12 +138,10 @@ NavBar
 Parallax
 --------------------------------------------- */
 .parallax-bg {
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     -moz-background-size: cover;
-    -webkit-background-size: cover;
+    background-size: cover;
     position: relative;
 }
 
@@ -335,9 +333,7 @@ footer {
 #btnTop {
     border-radius: 3.75em;
     -moz-border-radius: 3.75em;
-    -webkit-border-radius: 3.75em;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     top: -1.5em;
@@ -386,6 +382,10 @@ Media Queries
 
     #parallax-2 {
         background-image: url('../images/fortune-cookie.jpg');
+    }
+
+    .parallax-bg {
+        background-attachment: fixed;
     }
 }
 
