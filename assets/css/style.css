@@ -138,7 +138,6 @@ NavBar
 Parallax
 --------------------------------------------- */
 .parallax-bg {
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -386,6 +385,10 @@ Media Queries
 
     #parallax-2 {
         background-image: url('../images/fortune-cookie.jpg');
+    }
+
+    .parallax-bg {
+        background-attachment: fixed;
     }
 }
 
