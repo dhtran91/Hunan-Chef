@@ -94,8 +94,7 @@ Content
 /* ---------------------------------------------
 Brand
 --------------------------------------------- */
-.brand {
-    height: inherit;
+.brand {  
     font-size: 2rem;
     color: #FFE6CC;
     vertical-align: top;
