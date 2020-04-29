@@ -137,6 +137,36 @@ const friedRiceAndNoodles = [
     new MenuItem("Fried Rice & Noodle", "House Special Pan Fried Noodles", "Soft Noodles.", new Price(1, 8.50)),
 ];
 
+const comboSpecial = [
+    new MenuItem("Combo Special", "Sweet & Sour Pork", "", [new Price("Weekdays 11:00am - 3:00pm", 6.50), new Price("Weekends & After 3:00pm", 7.50)]),
+    new MenuItem("Combo Special", "Sweet & Sour Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 6.50), new Price("Weekends & After 3:00pm", 7.50)]),
+    new MenuItem("Combo Special", "Moo Goo Gai Pan", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
+    new MenuItem("Combo Special", "Mixed Vegetables", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
+    new MenuItem("Combo Special", "Spicy Chicken with Onion", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
+    new MenuItem("Combo Special", "Kung Pao Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Chicken with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Hunan Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Chicken with Garlic Sauce", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Pepper Steak", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Beef with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Beef with Garlic Sauce", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Sweet & Sour Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Shrimp with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Shrimp with Vegetables", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Hunan Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "General Tso's Chicekn", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Orange Flavor Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Hunan Beef", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Shrimp with Cashew Nuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Sesame Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Triple Delight", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Chicken with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Beef with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Shrimp with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Kung Pao Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Kung Pao Delight", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+]
+
 const Menu = [
     appetizers,
     soups,
@@ -191,8 +221,114 @@ function createMenuItemDiv(foodCategory) {
     return menuItemArea;
 }
 
+function createFamilyDinner(foodCategory) {
+    let menuItemArea = "";
+    foodCategory.forEach((menuItem) => {
+        menuItemArea += `
+    <div class="col s12 m4 l4 xl4 menu-item" data-menu-item="${menuItem.foodCourse}">
+            <div class="row">
+                <div class="col s8 m8 l8 xl8">
+                    <h3 class="subheading-2">${menuItem.itemName}</h3>`
+
+        menuItemArea += `
+    </div>
+    <div class="col s4 m3 l3 xl3 price-col right-align">`
+
+        if (menuItem.price.length > 1) {
+            menuItem.price.forEach((e) => {
+                menuItemArea += `
+                <p class="subheading-2">
+                (${e.priceType}) ${e.priceAmount.toFixed(2)}
+                </p>
+            `
+            })
+        }
+        else {
+            menuItemArea += `
+        
+        <p class="subheading-2">
+        $${menuItem.price.priceAmount.toFixed(2)}
+        </p>
+       
+        `
+        }
+        menuItemArea += `</div></div></div>`
+    })
+
+    return menuItemArea;
+}
+
+function createMenuTable(foodCategory) {
+    let menuTable = `<div class="col s12 m12 l12 xl12 menu-item" data-menu-item="Combo Special">
+    <table class="table">
+    <thead style="color: rgba(255, 230, 204, 1);">
+      <tr>
+        <th></th>
+        <th></th>
+        <th class="col-center">Weekdays<br/>11:00am - 3:00pm</th>
+        <th class="col-center">Weekends & After<br/>3:00pm</th>
+      </tr>
+    </thead>
+    <tbody style="color: rgba(255, 230, 204, 0.80);">`;
+    let count = 0;
+    foodCategory.forEach((menuItem) => {
+        menuTable += `
+                  <tr>
+                    <td>(${++count})</td>
+                    <td>${menuItem.itemName}</td>
+                    <td class="col-center">$${menuItem.price[0].priceAmount.toFixed(2)}</td>
+                    <td class="col-center">$${menuItem.price[1].priceAmount.toFixed(2)}</td>
+                  </tr>
+    `
+    })
+    menuTable += `</tbody></table></div>`;
+
+    return menuTable;
+}
+
 let menuItem = ""
 Menu.forEach(m => menuItem += createMenuItemDiv(m));
+menuItem += createMenuTable(comboSpecial);
+menuItem += `<div class="col s12 m12 l12 xl12 menu-item" data-menu-item="Family Dinner">
+<div style="display: flex; flex-direction: row;
+justify-content: space-evenly;
+flex-wrap: wrap; color: #ffe6cc; text-align: center">
+    <div style="margin: 10px; border: 1px solid; padding: 10px 20px; width:250px;">
+        <div style="margin-bottom: 20px; font-size: 2.2em; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; display: flex;">D-2 <span style="">$24.95<span></div>
+        <ul>
+            <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
+            <hr>
+            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <hr>
+            <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
+        </ul>
+    </div>
+    <div style="margin: 10px; border: 1px solid; padding: 10px 20px; width:250px;">
+        <div style="margin-bottom: 20px; font-size: 2.2em; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; display: flex;">D-3 <span style="">$35.95</span></div>
+        <ul>
+            <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
+            <hr>
+            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <hr>
+            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp</li>
+            <hr>
+            <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
+        </ul>
+    </div>
+    <div style="margin: 10px; border: 1px solid; padding: 10px 20px; width:250px;">
+        <div style="margin-bottom: 20px; font-size: 2.2em; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; display: flex;">D-4 <span style="">$46.95</span></div>
+        <ul>
+            <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
+            <hr>
+            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <hr>
+            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp</li>
+            <hr>
+            <li>General Tso's Chicken<br>or<br>Orange Chicken</li>
+            <hr>
+            <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
+        </ul>
+    </div></div>`;
 const menuSectionItems = document.getElementById("menuSectionItems");
 menuSectionItems.innerHTML = menuItem;
 

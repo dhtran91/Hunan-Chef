@@ -36,12 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const menuCourse = e.target.dataset.menuFoodCourse;
             const menuSectionNotesDiv = document.getElementById('menuSectionNotes');
+            const menuSectionNote = document.getElementById('note');
 
             if ((menuCourse === "Appetizers" || menuCourse === "Soup")) {
                 menuSectionNotesDiv.classList.remove('show');
-            } else {
+            } else if (menuCourse === "Combo Special") {
+                menuSectionNote.innerText = "Please Order by Number.\n(Served with Egg Roll & Fried Rice or Steamed Rice)\n(Please No Substitution)"
                 menuSectionNotesDiv.classList.add('show');
-                animateCss('#menuSectionNotes', 'fadeInUp')
+                animateCss('#menuSectionNotes', 'fadeInUp');
+            } else if (menuCourse === "Family Dinner") {
+                menuSectionNote.innerText = "Soups: Choice of Wonton, Egg Drop or Hot & Sour\nAppetizer: Egg roll & Crab puff\n($2.00) Added for Each Substituion"
+                menuSectionNotesDiv.classList.add('show');
+                animateCss('#menuSectionNotes', 'fadeInUp');
+            } else {
+                menuSectionNote.innerText = "Served with Steamed White or Brown Rice\nAdd $1.95 for Substitute Fried Rice"
+                menuSectionNotesDiv.classList.add('show');
+                animateCss('#menuSectionNotes', 'fadeInUp');
             }
 
             document.querySelectorAll(`.menu-item.show`).forEach(item => item.classList.remove('show'));

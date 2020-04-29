@@ -156,7 +156,7 @@ Parallax
 }
 
 #parallax-1 {
-    background-image: url('../images/chef-dough-mobile.jpg');
+    background-image: url('../images/buffet-mobile.jpg');
     min-height: 100vh;
 }
 
@@ -317,6 +317,9 @@ nav ul a:hover::before, .footer-nav a:hover::before{
     transform: scaleX(1);
 }
 
+hr {
+    border-color: rgba(191, 172, 153, 0.6)
+}
 /* ---------------------------------------------
 Footer
 --------------------------------------------- */
@@ -325,7 +328,7 @@ footer {
     position: relative;
 }
 
-.fa-angle-up {
+.fa-angle-up, .fa-pepper-hot {
     font-size: 24px;
     display: block;
 }
@@ -361,6 +364,12 @@ footer {
     margin: 0;
 }
 
+.btn {
+    background-color: transparent;
+    border: 1px solid #FFE6CC;
+    color: #FFE6CC;
+}
+
 /* ---------------------------------------------
 Social Media
 --------------------------------------------- */
@@ -373,6 +382,28 @@ Social Media
     opacity: 0.7;
 }
 
+/* ---------------------------------------------
+Table
+--------------------------------------------- */
+.table thead {
+    color: rgba(191, 172, 153, 0.7);
+}
+
+/* .table td {
+    color: #FFE6CC;
+} */
+
+.table tr {
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.col-center {
+    text-align: center;
+}
+
+td, th {
+    padding: 5px 5px;
+}
 /* ---------------------------------------------
 Media Queries
 --------------------------------------------- */
