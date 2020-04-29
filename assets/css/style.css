@@ -328,7 +328,12 @@ footer {
     position: relative;
 }
 
-.fa-angle-up, .fa-pepper-hot {
+.fa-pepper-hot {
+    margin: 0 8px;
+    display: inline;
+}
+
+.fa-angle-up {
     font-size: 24px;
     display: block;
 }

@@ -1,8 +1,10 @@
-function MenuItem(foodCourse, itemName, itemDescription, price) {
+function MenuItem(foodCourse, itemName, itemDescription, price, isSpicy) {
     this.foodCourse = foodCourse;
     this.itemName = itemName;
     this.itemDescription = itemDescription;
     this.price = price;
+    if(!isSpicy) this.isSpicy = false;
+    else this.isSpicy = isSpicy
 }
 
 function Price(priceType, priceAmount) {
@@ -142,29 +144,29 @@ const comboSpecial = [
     new MenuItem("Combo Special", "Sweet & Sour Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 6.50), new Price("Weekends & After 3:00pm", 7.50)]),
     new MenuItem("Combo Special", "Moo Goo Gai Pan", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
     new MenuItem("Combo Special", "Mixed Vegetables", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
-    new MenuItem("Combo Special", "Spicy Chicken with Onion", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)]),
-    new MenuItem("Combo Special", "Kung Pao Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Spicy Chicken with Onion", "", [new Price("Weekdays 11:00am - 3:00pm", 6.95), new Price("Weekends & After 3:00pm", 7.50)], true),
+    new MenuItem("Combo Special", "Kung Pao Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)], true),
     new MenuItem("Combo Special", "Chicken with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
-    new MenuItem("Combo Special", "Hunan Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Hunan Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)], true),
     new MenuItem("Combo Special", "Chicken with Garlic Sauce", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
     new MenuItem("Combo Special", "Pepper Steak", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
     new MenuItem("Combo Special", "Beef with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
-    new MenuItem("Combo Special", "Beef with Garlic Sauce", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95)]),
+    new MenuItem("Combo Special", "Beef with Garlic Sauce", "", [new Price("Weekdays 11:00am - 3:00pm", 7.50), new Price("Weekends & After 3:00pm", 7.95), true]),
     new MenuItem("Combo Special", "Sweet & Sour Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Shrimp with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Shrimp with Vegetables", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Hunan Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "General Tso's Chicekn", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Orange Flavor Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Hunan Beef", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Hunan Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
+    new MenuItem("Combo Special", "General Tso's Chicekn", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
+    new MenuItem("Combo Special", "Orange Flavor Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
+    new MenuItem("Combo Special", "Hunan Beef", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
     new MenuItem("Combo Special", "Shrimp with Cashew Nuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Sesame Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Sesame Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
     new MenuItem("Combo Special", "Triple Delight", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Chicken with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Beef with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Shrimp with Snow Peas & Water Chestnuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Kung Pao Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
-    new MenuItem("Combo Special", "Kung Pao Delight", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
+    new MenuItem("Combo Special", "Kung Pao Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
+    new MenuItem("Combo Special", "Kung Pao Delight", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
 ]
 
 const Menu = [
@@ -275,7 +277,7 @@ function createMenuTable(foodCategory) {
         menuTable += `
                   <tr>
                     <td>(${++count})</td>
-                    <td>${menuItem.itemName}</td>
+                    <td>${menuItem.itemName}${menuItem.isSpicy ? '<i class="fas fa-pepper-hot"></i>' : ''}</td>
                     <td class="col-center">$${menuItem.price[0].priceAmount.toFixed(2)}</td>
                     <td class="col-center">$${menuItem.price[1].priceAmount.toFixed(2)}</td>
                   </tr>
@@ -298,7 +300,7 @@ flex-wrap: wrap; color: #ffe6cc; text-align: center">
         <ul>
             <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
             <hr>
-            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <li>Hunan Beef<i class="fas fa-pepper-hot"></i><br>or<br>Hunan Chicken<i class="fas fa-pepper-hot"></i></li>
             <hr>
             <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
         </ul>
@@ -308,9 +310,9 @@ flex-wrap: wrap; color: #ffe6cc; text-align: center">
         <ul>
             <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
             <hr>
-            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <li>Hunan Beef<i class="fas fa-pepper-hot"></i><br>or<br>Hunan Chicken<i class="fas fa-pepper-hot"></i></li>
             <hr>
-            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp</li>
+            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp<i class="fas fa-pepper-hot"></i></li>
             <hr>
             <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
         </ul>
@@ -320,11 +322,11 @@ flex-wrap: wrap; color: #ffe6cc; text-align: center">
         <ul>
             <li>Sweet & Sour Pork<br>or<br>Sweet & Sour Chicken</li>
             <hr>
-            <li>Hunan Beef<br>or<br>Hunan Chicken</li>
+            <li>Hunan Beef<i class="fas fa-pepper-hot"></i><br>or<br>Hunan Chicken<i class="fas fa-pepper-hot"></i></li>
             <hr>
-            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp</li>
+            <li>Shrimp with Cashew Nuts<br>or<br>Kung Pao Shrimp<i class="fas fa-pepper-hot"></i></li>
             <hr>
-            <li>General Tso's Chicken<br>or<br>Orange Chicken</li>
+            <li>General Tso's Chicken<i class="fas fa-pepper-hot"></i><br>or<br>Orange Chicken<i class="fas fa-pepper-hot"></i></li>
             <hr>
             <li>Dinner Fried Rice<br>or<br>Steamed Rice</li>
         </ul>
