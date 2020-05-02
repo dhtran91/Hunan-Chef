@@ -156,7 +156,7 @@ const comboSpecial = [
     new MenuItem("Combo Special", "Shrimp with Broccoli", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Shrimp with Vegetables", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
     new MenuItem("Combo Special", "Hunan Shrimp", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
-    new MenuItem("Combo Special", "General Tso's Chicekn", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
+    new MenuItem("Combo Special", "General Tso's Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
     new MenuItem("Combo Special", "Orange Flavor Chicken", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
     new MenuItem("Combo Special", "Hunan Beef", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)], true),
     new MenuItem("Combo Special", "Shrimp with Cashew Nuts", "", [new Price("Weekdays 11:00am - 3:00pm", 7.95), new Price("Weekends & After 3:00pm", 8.50)]),
